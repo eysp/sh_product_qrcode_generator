@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('orderlines')]/t/t/div[hasclass('pos-receipt-left-padding')]" position="replace">
+            <div class="pos-receipt-left-padding prlp">
+                <span t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+                <span style="margin: 0px 5px;">x</span>
+                <span t-if="line.unit_name !== 'Units'" t-esc="line.unit_name" />
+                <span t-if="line.unit_name !== 'Units'" style="margin: 0px 5px;">x</span>
+                <span t-esc="env.pos.format_currency_no_symbol(line.price_display_one)" />
+                <span class="price_display pos-receipt-right-align">
+                    <t t-esc="env.pos.format_currency_no_symbol(line.price_display)" />
+                </span>
+            </div>
+        </xpath>
+    </t>
+</templates>

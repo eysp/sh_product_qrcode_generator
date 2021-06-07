@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_unpaid_pos_invoice" name="point_of_sale assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/d4e_pos_invoice_notpaid/static/src/js/screens.js"></script>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="invoice_date" position="after">
+                <field name="print_date" readonly="1"/>
+                <field name="printed" readonly="1"/>
+                <field name="sent" readonly="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_move_print">
+        <field name="name">Print Invoice</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                action = env.ref('account.account_invoices').report_action(records)
+                for r in records:
+                    r.write({'print_date': datetime.datetime.now(), 'printed': True})
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_print_isr_on_invoice">
+        <field name="name">Print invoice with ISR</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                active_ids = env.context.get('active_ids')
+                url = '/report/isr/%s' % ','.join(str(id) for id in active_ids)
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': url,
+                    'target': 'new',
+                }
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_print_qr_on_invoice">
+        <field name="name">Print invoice with QR</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                active_ids = env.context.get('active_ids')
+                url = '/report/qr/%s' % ','.join(str(id) for id in active_ids)
+                action = {
+                    'type': 'ir.actions.act_url',
+                    'url': url,
+                    'target': 'new',
+                }
+        </field>
+    </record>
+
+    <record id="view_move_form_inherit_qr" model="ir.ui.view">
+        <field name="name">invoice.move.form.inherit.qr</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="%(action_print_qr_on_invoice)d" class="oe_highlight" string="Print invoice with QR"
+                        type="action"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

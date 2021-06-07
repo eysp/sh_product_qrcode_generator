@@ -1,0 +1,42 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_pos_invoice_notpaid
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-22 13:30+0000\n"
+"PO-Revision-Date: 2021-02-22 13:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_pos_invoice_notpaid
+#: model:ir.model,name:d4e_pos_invoice_notpaid.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Point Of Sale Verkäufe"
+
+#. module: d4e_pos_invoice_notpaid
+#: model:ir.model,name:d4e_pos_invoice_notpaid.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Point of Sale Zahlungsmethoden"
+
+#. module: d4e_pos_invoice_notpaid
+#: model:ir.model,name:d4e_pos_invoice_notpaid.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Point of Sale Sitzung"
+
+#. module: d4e_pos_invoice_notpaid
+#: model:ir.model.fields,field_description:d4e_pos_invoice_notpaid.field_pos_payment_method__unpaid_invoice
+msgid "Unpaid Invoice"
+msgstr "Unbezahlte Rechnung "
+
+#. module: d4e_pos_invoice_notpaid
+#: code:addons/d4e_pos_invoice_notpaid/__init__.py:0
+#, python-format
+msgid "Unpaid invoice"
+msgstr "Unbezahlte Rechnung "
