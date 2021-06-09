@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fleet_vehicle_view_form_inherit_hr" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.inherit.hr</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='plan_to_change_car']" position="replace"/>
+            <xpath expr="//field[@name='next_assignation_date']" position="replace"/>
+            <xpath expr="//field[@name='location']" position="replace"/>
+            <xpath expr="//label[@for='future_driver_id']" position="attributes">
+                <attribute name="nolabel">1</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='future_driver_id']" position="attributes">
+                <attribute name="nolabel">1</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='driver_id']" position="after">
+                <field name="insurance_id"/>
+                <field name="policy_number"/>
+            </xpath>
+            <xpath expr="//field[@name='vin_sn']" position="before">
+                <field name="last_expertise"/>
+                <field name="weight"/>
+            </xpath>
+            <xpath expr="//field[@name='vin_sn']" position="after">
+                <field name="driving_license"/>
+                <field name="key_code_1"/>
+                <field name="key_code_2"/>
+                <field name="radio_code"/>
+                <field name="key_identification"/>
+            </xpath>
+            <xpath expr="//form/sheet/group[1]/group[5]"  position="after">
+                <group string="Description">
+                <field name="description" nolabel="1" placeholder="Write here any other information about this vehicle"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
