@@ -33,11 +33,7 @@
                 <field name="radio_code"/>
                 <field name="key_identification"/>
             </xpath>
-            <xpath expr="//form/sheet/group[1]/group[5]"  position="after">
-                <group string="Description">
-                <field name="description" nolabel="1" placeholder="Write here any other information about this vehicle"/>
-                </group>
-            </xpath>
+
         </field>
     </record>
 </odoo>
