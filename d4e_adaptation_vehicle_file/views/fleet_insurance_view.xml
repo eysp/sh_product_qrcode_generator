@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='fleet_vehicle_log_insurance_view_form' model='ir.ui.view'>
+        <field name="name">fleet.vehicle.log.insurance.form</field>
+        <field name="model">fleet.vehicle.log.insurance</field>
+        <field name="arch" type="xml">
+            <form string="Insurances">
+                <sheet>
+                    <field name="name"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id='fleet_vehicle_log_insurance_view_tree' model='ir.ui.view'>
+        <field name="name">fleet.vehicle.log.insurance.tree</field>
+        <field name="model">fleet.vehicle.log.insurance</field>
+        <field name="arch" type="xml">
+            <tree string="Insurances">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id='fleet_vehicle_log_insurance_action' model='ir.actions.act_window'>
+        <field name="name">Insurances</field>
+        <field name="res_model">fleet.vehicle.log.insurance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context"></field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new insurance
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="Insurances" action="fleet_vehicle_log_insurance_action" parent="fleet.fleet_vehicles" id="fleet_vehicle_log_insurance_menu" groups="fleet.fleet_group_user" sequence="2"/>
+</odoo>

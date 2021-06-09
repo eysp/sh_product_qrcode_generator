@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* d4e_adaptation_vehicle_file
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 13:31+0000\n"
+"PO-Revision-Date: 2021-06-07 13:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__insurance_id
+msgid "Insurance"
+msgstr "Assurance"
+
+#. module: d4e_adaptation_vehicle_file
+#: model_terms:ir.actions.act_window,help:d4e_adaptation_vehicle_file.fleet_vehicle_log_insurance_action
+msgid "Create a new insurance"
+msgstr "Créer une nouvelle assurance"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: d4e_adaptation_vehicle_file
+#: model_terms:ir.ui.view,arch_db:d4e_adaptation_vehicle_file.fleet_vehicle_view_form_inherit_hr
+msgid "Description"
+msgstr "Description"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__driving_license
+msgid "Driving license"
+msgstr "Permis de circulation"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__id
+msgid "ID"
+msgstr "ID"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.actions.act_window,name:d4e_adaptation_vehicle_file.fleet_vehicle_log_insurance_action
+#: model:ir.ui.menu,name:d4e_adaptation_vehicle_file.fleet_vehicle_log_insurance_menu
+#: model_terms:ir.ui.view,arch_db:d4e_adaptation_vehicle_file.fleet_vehicle_log_insurance_view_form
+#: model_terms:ir.ui.view,arch_db:d4e_adaptation_vehicle_file.fleet_vehicle_log_insurance_view_tree
+msgid "Insurances"
+msgstr "Assurances"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__key_code_1
+msgid "Key Code 1"
+msgstr "Code clé 1"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__key_code_2
+msgid "Key Code 2"
+msgstr "Code clé 2"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__key_identification
+msgid "Key Identification"
+msgstr "Identification clé"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__last_expertise
+msgid "Last Expertise Date"
+msgstr "Date de la dernière expertise"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle_log_insurance__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__policy_number
+msgid "Policy N°"
+msgstr "N° de police"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__radio_code
+msgid "Radio Code"
+msgstr "Code Radio"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,help:d4e_adaptation_vehicle_file.field_fleet_vehicle__driving_license
+msgid "Upload the file"
+msgstr "Télécharger le fichier"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model,name:d4e_adaptation_vehicle_file.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Véhicule"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__weight
+msgid "Weight"
+msgstr "Poids"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,help:d4e_adaptation_vehicle_file.field_fleet_vehicle__description
+#: model_terms:ir.ui.view,arch_db:d4e_adaptation_vehicle_file.fleet_vehicle_view_form_inherit_hr
+msgid "Write here any other information about this vehicle"
+msgstr "Écrivez ici toute autre information sur ce véhicule"
+
+#. module: d4e_adaptation_vehicle_file
+#: model:ir.model.fields,field_description:d4e_adaptation_vehicle_file.field_fleet_vehicle__description
+msgid "description"
+msgstr "description"
+
