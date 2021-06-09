@@ -15,7 +15,7 @@ class FleetVehicle(models.Model):
     key_identification = fields.Char('Key Identification')
     policy_number = fields.Char('Policy N°')
     insurance_id = fields.Many2one('fleet.vehicle.log.insurance', 'Insurance', tracking=True)
-    description = fields.Text('description', tracking=True, help='Write here any other information about this vehicle')
+
 
 
 
