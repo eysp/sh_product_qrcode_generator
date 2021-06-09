@@ -26,6 +26,11 @@
                 <field name="last_expertise"/>
                 <field name="weight"/>
             </xpath>
+            <xpath expr="//field[@name='odometer_unit']" position="replace"/>
+
+            <xpath expr="//field[@name='odometer']" position="attributes">
+                <attribute name="widget">integer</attribute>
+            </xpath>
             <xpath expr="//field[@name='vin_sn']" position="after">
                 <field name="driving_license"/>
                 <field name="key_code_1"/>
