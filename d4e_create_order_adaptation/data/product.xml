@@ -2,14 +2,15 @@
 <odoo>
 
     <record id="consumable_product" model="product.product">
-          <field name="name">consommable</field>
+          <field name="name">Consommable Repair</field>
             <field name="standard_price">0.0</field>
             <field name="list_price">0.0</field>
             <field name="type">consu</field>
+            <field name="active">False</field>
             <field name="weight">0.01</field>
             <field name="uom_id" ref="uom.product_uom_unit"/>
             <field name="uom_po_id" ref="uom.product_uom_unit"/>
-            <field name="default_code">FURN_1234</field>
+            <field name="default_code">repair_product</field>
         </record>
 
 </odoo>
