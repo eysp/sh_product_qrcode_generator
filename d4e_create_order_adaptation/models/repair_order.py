@@ -10,16 +10,10 @@ class Repair(models.Model):
     mileage = fields.Float(string='Mileage')
     product_id = fields.Many2one(
         'product.product', string='Product to Repair',
-        domain="[('type', 'in', ['product', 'consu']), '|', ('company_id', '=', company_id), ('company_id', '=', False)]",
+        domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]",
+        default=lambda self: self.env.ref('d4e_create_order_adaptation.consumable_product', raise_if_not_found=False),
         readonly=True, required=False, states={'draft': [('readonly', False)]}, check_company=True)
-    product_uom = fields.Many2one(
-        'uom.uom', 'Product Unit of Measure',
-        readonly=True, required=False, states={'draft': [('readonly', False)]}, domain="[('category_id', '=', product_uom_category_id)]")
-    location_id = fields.Many2one(
-        'stock.location', 'Location',
-        index=True, readonly=True, required=False, check_company=True,
-        help="This is the location where the product to repair is located.",
-        states={'draft': [('readonly', False)], 'confirmed': [('readonly', True)]})
+
 
     @api.onchange('vehicle_id')
     def on_change_client(self):

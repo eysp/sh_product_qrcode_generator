@@ -7,11 +7,8 @@
         <field name="inherit_id" ref="repair.view_repair_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='location_id']" position="attributes">
-                <attribute name="required">False</attribute>
-                <attribute name="nolabel">1</attribute>
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//field[@name='location_id']" position="replace"/>
             <xpath expr="//field[@name='guarantee_limit']" position="replace"/>
             <xpath expr="//label[@for='product_qty']" position="attributes">
                 <attribute name="nolabel">1</attribute>
@@ -22,7 +19,6 @@
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//field[@name='product_id']" position="attributes">
-                <attribute name="nolabel">1</attribute>
                 <attribute name="invisible">1</attribute>
             </xpath>
 
