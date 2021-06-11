@@ -16,5 +16,6 @@
         # 'security/ir.model.access.csv',
         'data/product.xml',
         'views/repair_views.xml',
+        'views/account_move.xml',
     ],
 }
