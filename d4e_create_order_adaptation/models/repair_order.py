@@ -20,5 +20,28 @@ class Repair(models.Model):
         self.partner_id = self.vehicle_id.driver_id
         self.mileage = self.vehicle_id.odometer
 
+    @api.onchange('mileage')
+    def on_change_client(self):
+        self.vehicle_id.write({'odometer': self.mileage})
+
+    def _create_invoices(self, group=False):
+        res = super(Repair, self)._create_invoices(group=group)
+        for repair_id in res:
+            repair = self.env['repair.order'].browse(repair_id)
+            invoice = self.env['account.move'].browse(res[repair_id])
+            invoice['vehicle_id'] = repair['vehicle_id']
+            invoice['invoice_mileage'] = repair['mileage']
+        return res
+
+    def write(self, vals):
+        res = super(Repair, self).write(vals)
+        if 'mileage' in vals:
+            self.vehicle_id.odometer = self.mileage
+        return res
+
+
+
+
+
 
 
