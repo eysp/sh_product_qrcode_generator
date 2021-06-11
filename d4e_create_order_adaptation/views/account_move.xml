@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="view_move_form_inherit_repair" model="ir.ui.view">
         <field name="name">account.move.form.repair</field>
         <field name="model">account.move</field>
@@ -11,4 +12,5 @@
             </xpath>
         </field>
     </record>
+
 </odoo>

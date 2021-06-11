@@ -19,10 +19,10 @@ class Repair(models.Model):
     def on_change_client(self):
         self.partner_id = self.vehicle_id.driver_id
         self.mileage = self.vehicle_id.odometer
-
-    @api.onchange('mileage')
-    def on_change_client(self):
-        self.vehicle_id.write({'odometer': self.mileage})
+    #
+    # @api.onchange('mileage')
+    # def on_change_client(self):
+    #     self.vehicle_id.write({'odometer': self.mileage})
 
     def _create_invoices(self, group=False):
         res = super(Repair, self)._create_invoices(group=group)
@@ -39,9 +39,9 @@ class Repair(models.Model):
             self.vehicle_id.odometer = self.mileage
         return res
 
-
-
-
-
-
-
+    @api.model
+    def create(self, vals):
+        res = super(Repair, self).create(vals)
+        if ('mileage' in vals) and (res.vehicle_id):
+            res.vehicle_id.write({'odometer': res.mileage})
+        return res
