@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_repairorder_inherit" inherit_id="repair.report_repairorder">
+        <xpath expr="//t[@t-set='information_block']" position="replace">
+        </xpath>
+        <xpath expr="//h2[1]" position="replace">
+            <h2 style="font-size: 1.8em;">
+                <span t-if="o.state != 'draft'">Ordre de réparation  #:</span>
+                <span t-if="o.state == 'draft'">Devis de réparation  #:</span>
+                <span t-field="o.name"/>
+            </h2>
+        </xpath>
+
+        <xpath expr="//div[@id='informations']" position="after">
+            <br/>
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 30%">
+                        <t t-if="o.vehicle_id.model_id.brand_id.name">
+                            <strong>Marque:</strong>
+                            <span t-field="o.vehicle_id.model_id.brand_id.name" class="m-0"/>
+                        </t>
+                    </td>
+                    <td style="width: 30%">
+                        <t t-if="o.vehicle_id.license_plate">
+                            <strong>N° plaque:</strong>
+                            <span t-field="o.vehicle_id.license_plate"/>
+                        </t>
+                    </td>
+                    <td style="width: 40%">
+                        <t t-if="o.mileage">
+                            <strong>Kilométrage:</strong>
+                            <span t-field="o.mileage" class="m-0"/>
+                        </t>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+        </xpath>
+        <xpath expr="//div[@id='informations']" position="replace">
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 40%">
+                        <strong>Date:</strong>
+                        <p t-esc="datetime.datetime.now().strftime('%Y-%m-%d')" t-options="{'widget': 'date'}"
+                           class="m-0"/>
+                    </td>
+                </tr>
+            </table>
+        </xpath>
+        <xpath expr="//tbody/t/tr/td" position="replace">
+            <td colspan="5"><strong>Articles / pièces</strong></td>
+        </xpath>
+        <xpath expr="//tbody/t/tr[2]/td" position="replace">
+            <td>
+                <p t-if="line.type == 'add'">
+                    <span t-field="line.name"/>
+                </p>
+                <p t-if="line.type == 'remove'">
+                    <span t-field="line.name"/>
+                </p>
+            </td>
+        </xpath>
+        <xpath expr="//tbody/t[2]/tr/td" position="replace">
+            <td colspan="5"><strong>Opérations</strong></td>
+        </xpath>
+        <xpath expr="//thead/tr/th[2]" position="replace">
+            <th class="text-right">Quantité</th>
+        </xpath>
+    </template>
+
+</odoo>

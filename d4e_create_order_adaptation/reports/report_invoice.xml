@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_order_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//t/div/h2[1]" position="before">
+            <br/>
+            <br/>
+            <br/>
+        </xpath>
+        <xpath expr="//h2[1]" position="replace">
+            <h2 style="font-size: 2.0em;">
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</span>
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                <span t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                <span t-if="o.move_type == 'out_refund'">Credit Note</span>
+                <span t-if="o.move_type == 'in_refund'">Vendor Credit Note</span>
+                <span t-if="o.move_type == 'in_invoice'">Vendor Bill</span>
+                <span t-if="o.name != '/'" t-field="o.name"/>
+            </h2>
+        </xpath>
+        <xpath expr="//h2" position="after">
+            <br/>
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 30%">
+                        <t t-if="o.vehicle_id.model_id.brand_id.name">
+                            <strong>Marque:</strong>
+                            <span t-field="o.vehicle_id.model_id.brand_id.name" class="m-0"/>
+                        </t>
+                    </td>
+                    <td style="width: 30%">
+                        <t t-if="o.vehicle_id.license_plate">
+                            <strong>N° plaque:</strong>
+                            <span t-field="o.vehicle_id.license_plate"/>
+                        </t>
+                    </td>
+                    <td style="width: 40%">
+                        <t t-if="o.invoice_mileage">
+                            <strong>Kilométrage:</strong>
+                            <span t-field="o.invoice_mileage" class="m-0"/>
+                        </t>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+        </xpath>
+    </template>
+
+</odoo>
