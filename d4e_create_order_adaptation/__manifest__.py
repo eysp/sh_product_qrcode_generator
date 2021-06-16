@@ -17,5 +17,7 @@
         'data/product.xml',
         'views/repair_views.xml',
         'views/account_move.xml',
+        'reports/report_repair_order.xml',
+        'reports/report_invoice.xml',
     ],
 }
