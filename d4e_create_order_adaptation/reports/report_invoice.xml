@@ -18,26 +18,60 @@
                 <span t-if="o.name != '/'" t-field="o.name"/>
             </h2>
         </xpath>
-        <xpath expr="//h2" position="after">
+        <xpath expr="//div[@id='informations']" position="replace">
             <br/>
             <table style="width: 100%">
                 <tr>
-                    <td style="width: 30%">
+                    <td style="width: 20%">
                         <t t-if="o.vehicle_id.model_id.brand_id.name">
                             <strong>Marque:</strong>
-                            <span t-field="o.vehicle_id.model_id.brand_id.name" class="m-0"/>
+                            <p t-field="o.vehicle_id.model_id.brand_id.name" class="m-0"/>
                         </t>
                     </td>
-                    <td style="width: 30%">
+                    <td style="width: 20%">
                         <t t-if="o.vehicle_id.license_plate">
                             <strong>N° plaque:</strong>
-                            <span t-field="o.vehicle_id.license_plate"/>
+                            <p t-field="o.vehicle_id.license_plate"/>
                         </t>
                     </td>
-                    <td style="width: 40%">
+                    <td style="width: 20%">
                         <t t-if="o.invoice_mileage">
                             <strong>Kilométrage:</strong>
-                            <span t-field="o.invoice_mileage" class="m-0"/>
+                            <p t-field="o.invoice_mileage" class="m-0"/>
+                        </t>
+                    </td>
+                    <td style="width: 20%"></td>
+                    <td style="width: 20%"></td>
+                </tr>
+                <tr>
+                    <td style="width: 20%">
+                        <t t-if="o.invoice_date" >
+                            <strong>Invoice Date:</strong>
+                            <p class="m-0" t-field="o.invoice_date"/>
+                        </t>
+                    </td>
+                    <td style="width: 20%">
+                        <t t-if="o.invoice_date_due and o.move_type == 'out_invoice' and o.state == 'posted'">
+                            <strong>Due Date:</strong>
+                            <p class="m-0" t-field="o.invoice_date_due"/>
+                        </t>
+                    </td>
+                    <td style="width: 20%">
+                        <t t-if="o.invoice_origin">
+                            <strong>Source:</strong>
+                            <p class="m-0" t-field="o.invoice_origin"/>
+                        </t>
+                    </td>
+                    <td style="width: 20%">
+                        <t t-if="o.partner_id.ref" name="customer_code">
+                            <strong>Customer Code:</strong>
+                            <p class="m-0" t-field="o.partner_id.ref"/>
+                        </t>
+                    </td>
+                    <td style="width: 20%">
+                        <t t-if="o.ref" name="reference">
+                            <strong>Reference:</strong>
+                            <p class="m-0" t-field="o.ref"/>
                         </t>
                     </td>
                 </tr>
