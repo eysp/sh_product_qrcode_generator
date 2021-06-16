@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0+e\n"
+"Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-07 15:50+0000\n"
-"PO-Revision-Date: 2021-06-07 15:50+0000\n"
+"POT-Creation-Date: 2021-06-16 07:00+0000\n"
+"PO-Revision-Date: 2021-06-16 07:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,40 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: d4e_create_order_adaptation
+#: model:product.product,name:d4e_create_order_adaptation.consumable_product
+#: model:product.template,name:d4e_create_order_adaptation.consumable_product_product_template
+msgid "Consommable Repair"
+msgstr "Réparation de consommables "
+
+#. module: d4e_create_order_adaptation
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_move__display_name
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_repair_order__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: d4e_create_order_adaptation
+#: model:ir.model,name:d4e_create_order_adaptation.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: d4e_create_order_adaptation
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_move____last_update
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_repair_order____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: d4e_create_order_adaptation
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_bank_statement_line__invoice_mileage
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_move__invoice_mileage
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_payment__invoice_mileage
 #: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_repair_order__mileage
 msgid "Mileage"
 msgstr "Kilométrage"
+
+#. module: d4e_create_order_adaptation
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_repair_order__product_id
+msgid "Product to Repair"
+msgstr "Article à réparer"
 
 #. module: d4e_create_order_adaptation
 #: model:ir.model,name:d4e_create_order_adaptation.model_repair_order
@@ -26,6 +57,15 @@ msgid "Repair Order"
 msgstr "Ordre de réparation"
 
 #. module: d4e_create_order_adaptation
+#: model:product.product,uom_name:d4e_create_order_adaptation.consumable_product
+#: model:product.template,uom_name:d4e_create_order_adaptation.consumable_product_product_template
+msgid "Units"
+msgstr "Unités"
+
+#. module: d4e_create_order_adaptation
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_bank_statement_line__vehicle_id
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_move__vehicle_id
+#: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_account_payment__vehicle_id
 #: model:ir.model.fields,field_description:d4e_create_order_adaptation.field_repair_order__vehicle_id
 msgid "Vehicle"
 msgstr "Véhicule"
