@@ -109,7 +109,6 @@
         <field name="active">False</field>
     </record>
 
-
     <function name="write" model="ir.model.data">
         <function name="search" model="ir.model.data">
             <value
@@ -117,7 +116,6 @@
         </function>
         <value eval="{'noupdate': True}"/>
     </function>
-
 
     <record id="1_vat_77" model="account.tax">
         <field name="description">7.7%</field>
@@ -188,6 +186,7 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
+
     <record id="1_vat_25_invest" model="account.tax">
         <field name="description">2.5% invest.</field>
         <field name="name">VAT 2.5% invest. and FG HT </field>
@@ -195,7 +194,6 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
-
 
      <record id="1_vat_25_invest_incl" model="account.tax">
         <field name="description">2.5% invest. Incl.</field>
@@ -228,6 +226,7 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
+
     <record id="1_vat_37_purchase_incl" model="account.tax">
         <field name="description">3.7% purchase Incl.</field>
         <field name="name">VAT 3.7% purchase of goods including VAT</field>
@@ -235,6 +234,7 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
+
     <record id="1_vat_37_invest" model="account.tax">
         <field name="description">3.7% invest</field>
         <field name="name">VAT 3.7% invest. and FG HT</field>
@@ -243,7 +243,7 @@
         <field name="type_tax_use">purchase</field>
     </record>
 
-        <record id="1_vat_37_invest_incl" model="account.tax">
+    <record id="1_vat_37_invest_incl" model="account.tax">
         <field name="description">3.7% invest Incl.</field>
         <field name="name">VAT 3.7% invest. and FG TTC</field>
         <field name="active">1</field>
@@ -258,6 +258,7 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
+
     <record id="1_vat_77_invest_incl" model="account.tax">
         <field name="description">7.7% invest. Incl.</field>
         <field name="name">TVA 7.7% invest. and FG TTC</field>
@@ -265,6 +266,7 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
+
     <record id="1_vat_XO" model="account.tax">
         <field name="description">0%</field>
         <field name="name">0% export VAT</field>
@@ -336,6 +338,5 @@
         <field name="sequence">1</field>
         <field name="type_tax_use">purchase</field>
     </record>
-
 
 </odoo>
