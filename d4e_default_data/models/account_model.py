@@ -13,3 +13,8 @@ class AccountReconcileModel(models.Model):
         default=True,
         help="Search in the Statement's Reference to find the Invoice/Payment's reference",
     )
+
+class AccountMove(models.Model):
+    _inherit = 'account.move'
+
+    internal_reference = fields.Char(string='Internal Reference')
