@@ -16,5 +16,7 @@
         # 'security/ir.model.access.csv',
         'data/account_tax_data.xml',
         'data/account_data.xml',
+        'views/account.xml',
+        'views/res_partner.xml',
     ],
 }
