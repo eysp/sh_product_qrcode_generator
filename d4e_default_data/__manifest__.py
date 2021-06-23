@@ -10,7 +10,7 @@
     'version': '14.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['account'],
+    'depends': ['account', 'contacts', 'l10n_ch'],
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
