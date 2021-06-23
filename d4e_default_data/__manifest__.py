@@ -18,5 +18,6 @@
         'data/account_data.xml',
         'views/account.xml',
         'views/res_partner.xml',
+        'views/template.xml',
     ],
 }

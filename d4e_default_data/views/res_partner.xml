@@ -7,8 +7,8 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <field name="vat" position="after">
-                    <field name="customer_no"/>
-                    <button name="increment" string="Increment" type="object"/>
+                    <field name="customer_no" class="customer_no" id="o_field_input_customer_no"/>
+                    <button name="increment_button" class="increment_class" string="Increment"/>
             </field>
         </field>
     </record>
