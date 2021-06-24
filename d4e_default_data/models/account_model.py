@@ -14,6 +14,7 @@ class AccountReconcileModel(models.Model):
         help="Search in the Statement's Reference to find the Invoice/Payment's reference",
     )
 
+
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
