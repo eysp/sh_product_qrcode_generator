@@ -21,28 +21,34 @@
         <xpath expr="//div[@id='informations']" position="replace">
             <br/>
             <table style="width: 100%">
-                <tr>
-                    <td style="width: 20%">
-                        <t t-if="o.vehicle_id.model_id.brand_id.name">
-                            <strong>Marque:</strong>
-                            <p t-field="o.vehicle_id.model_id.brand_id.name" class="m-0"/>
-                        </t>
-                    </td>
-                    <td style="width: 20%">
-                        <t t-if="o.vehicle_id.license_plate">
-                            <strong>N° plaque:</strong>
-                            <p t-field="o.vehicle_id.license_plate"/>
-                        </t>
-                    </td>
-                    <td style="width: 20%">
-                        <t t-if="o.invoice_mileage">
-                            <strong>Kilométrage:</strong>
-                            <p t-field="o.invoice_mileage" class="m-0"/>
-                        </t>
-                    </td>
-                    <td style="width: 20%"></td>
-                    <td style="width: 20%"></td>
-                </tr>
+                <t t-if="o.move_type == 'in_invoice' or o.move_type == 'in_refund'">
+                    <tr>
+                    </tr>
+                </t>
+                <t t-else="">
+                    <tr>
+                        <td style="width: 20%">
+                            <t t-if="o.vehicle_id.model_id.brand_id.name">
+                                <strong>Marque:</strong>
+                                <p t-field="o.vehicle_id.model_id.brand_id.name" class="m-0"/>
+                            </t>
+                        </td>
+                        <td style="width: 20%">
+                            <t t-if="o.vehicle_id.license_plate">
+                                <strong>N° plaque:</strong>
+                                <p t-field="o.vehicle_id.license_plate"/>
+                            </t>
+                        </td>
+                        <td style="width: 20%">
+                            <t t-if="o.invoice_mileage">
+                                <strong>Kilométrage:</strong>
+                                <p t-field="o.invoice_mileage" class="m-0"/>
+                            </t>
+                        </td>
+                        <td style="width: 20%"></td>
+                        <td style="width: 20%"></td>
+                    </tr>
+                </t>
                 <tr>
                     <td style="width: 20%">
                         <t t-if="o.invoice_date" >
