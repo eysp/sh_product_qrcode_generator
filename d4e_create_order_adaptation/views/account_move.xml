@@ -7,8 +7,8 @@
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='payment_reference']" position="after">
-                <field name="vehicle_id" />
-                <field name="invoice_mileage"/>
+                <field name="vehicle_id" attrs="{'invisible': ['|', ('move_type', '==', 'in_invoice'), ('move_type', '==' , 'in_refund')]}"/>
+                <field name="invoice_mileage" attrs="{'invisible': ['|', ('move_type', '==', 'in_invoice'), ('move_type', '==' , 'in_refund')]}"/>
             </xpath>
         </field>
     </record>
