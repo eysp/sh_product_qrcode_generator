@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="BTC" model="res.currency">
+            <field name="active">True</field>
+            <field name="name">BTC</field>
+            <field name="symbol">BTC</field>
+            <field name="rounding">0.000000000000000001</field>
+            <field name="decimal_places">18</field>
+            <field name="position">before</field>
+            <field name="currency_unit_label">BitCoin</field>
+            <field name="currency_subunit_label">BTC</field>
+        </record>
+
+        <record id="rateBTC" model="res.currency.rate">
+            <field name="currency_id" ref="BTC" />
+            <field name="name">2021-06-23</field>
+            <field name="rate">1.0</field>
+        </record>
+    </data>
+</odoo>

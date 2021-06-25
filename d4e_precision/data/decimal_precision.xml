@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product.decimal_price" model="decimal.precision">
+            <field name="digits">18</field>
+        </record>
+
+        <record id="product.decimal_discount" model="decimal.precision">
+            <field name="digits">18</field>
+        </record>
+
+        <record id="account.decimal_payment" model="decimal.precision">
+            <field name="digits">18</field>
+        </record>
+
+        <record id="decimal_currency_rouding" model="decimal.precision">
+            <field name="name">Currency Rounding</field>
+            <field name="digits">18</field>
+        </record>
+
+        <record id="decimal_currency_rate" model="decimal.precision">
+            <field name="name">Currency Rate</field>
+            <field name="digits">18</field>
+        </record>
+    </data>
+</odoo>
