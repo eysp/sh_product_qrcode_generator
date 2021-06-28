@@ -7,12 +7,13 @@
             <field name="model">postal.number</field>
             <field name="arch" type="xml">
                 <tree string="Postal Number">
-                    <field name="REC_ART"/>
-                    <field name="ONRP"/>
-                    <field name="BFSNR"/>
-                    <field name="POSTLEITZAHL"/>
-                    <field name="PLZ_ZZ"/>
-                    <field name="GPLZ"/>
+                    <field name="onrp"/>
+                    <field name="bfsnr"/>
+                    <field name="plz_typ"/>
+                    <field name="kanton"/>
+                    <field name="gplz"/>
+                    <field name="ortbez18"/>
+                    <field name="sprachcode"/>
                 </tree>
             </field>
         </record>
