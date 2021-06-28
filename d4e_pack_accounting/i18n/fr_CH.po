@@ -115,6 +115,14 @@ msgid "Customer Credit Note"
 msgstr "Note de crédit du client"
 
 #. module: account
+
+#: model:ir.model.fields.selection,name:account.selection__account_invoice_report__move_type__in_refund
+#: model:ir.model.fields.selection,name:account.selection__account_move__move_type__in_refund
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid "Vendor Credit Note"
+msgstr "Note de crédit de fournisseur"
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Credit Note"
 msgstr "Note de crédit"
