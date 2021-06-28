@@ -152,3 +152,19 @@ msgstr "Banques"
 #: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_banks_list
 msgid "Banks List"
 msgstr "Liste des banques "
+
+#. module: d4e_pack_accounting
+#: model:ir.actions.act_window,name:d4e_pack_accounting.action_postal_numbers
+msgid "postal number"
+msgstr "Localités"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Credit Note"
+msgstr "Note de crédit"
+
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
+msgid "Vendor Credit Note"
+msgstr "Note de crédit de fournisseur"
