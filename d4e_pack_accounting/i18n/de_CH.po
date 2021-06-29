@@ -128,3 +128,20 @@ msgstr "Banken"
 #: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_banks_list
 msgid "Banks List"
 msgstr "Bankenliste"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__phone_2
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__phone_2
+msgid "Phone 2"
+msgstr "Telefon 2"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.res_partner_view_form_inherit
+msgid "Increment"
+msgstr "Zuwachs"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__customer_no
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__customer_no
+msgid "Customer no."
+msgstr "Kunden-Nr."

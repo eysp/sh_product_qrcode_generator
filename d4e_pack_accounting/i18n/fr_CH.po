@@ -163,8 +163,37 @@ msgstr "Localités"
 msgid "Credit Note"
 msgstr "Note de crédit"
 
+#. module: d4e_pack_accounting
+#: model:ir.model,name:d4e_pack_accounting.model_postal_number
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_postal_number_tree
+msgid "Postal Number"
+msgstr "Localités"
+
+#. module: d4e_pack_accounting
+#: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_postal_list
+#: model:ir.ui.menu,name:d4e_pack_accounting.menu_config_postal_numbers
+msgid "Postal numbers"
+msgstr "Localités"
+
 
 #. module: d4e_pack_accounting
 #: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.report_invoice_order_document_inherit
 msgid "Vendor Credit Note"
 msgstr "Note de crédit de fournisseur"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__phone_2
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__phone_2
+msgid "Phone 2"
+msgstr "Téléphone 2"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.res_partner_view_form_inherit
+msgid "Increment"
+msgstr "Incrémenter"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__customer_no
+#: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__customer_no
+msgid "Customer no."
+msgstr "N° de client"

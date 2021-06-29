@@ -6,6 +6,9 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_ids']" position="before">
+                <field name="phone_2" />
+            </xpath>
             <field name="vat" position="after">
                     <field name="customer_no" class="customer_no" id="o_field_input_customer_no"/>
                 <div class="oe_edit_only">
