@@ -36,20 +36,6 @@
             <field name="ref" position="after">
                 <field name="internal_reference"/>
             </field>
-            <xpath expr="//control" position="inside">
-                <create name="add_title_control" string="Add a Title" context="{'default_display_type': 'line_note'}"/>
-            </xpath>
-            <xpath expr="//templates/t/div/t[2]" position="replace">
-                <t t-if="record.display_type.raw_value === 'line_section' || record.display_type.raw_value === 'line_note' || record.default_display_type === 'line_title'">
-                    <div class="row">
-                        <div class="col-12">
-                            <span>
-                               <b><t t-esc="record.name.value"/></b>
-                            </span>
-                        </div>
-                    </div>
-                </t>
-            </xpath>
         </field>
     </record>
 
