@@ -11,7 +11,7 @@
                 </field>
             </field>
         </record>
-         <function model="res.bank" name="create_bank_with_api"/>
+<!--         <function model="res.bank" name="create_bank_with_api"/>-->
 
     </data>
 </odoo>

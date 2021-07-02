@@ -14,6 +14,13 @@
                 <span t-if="o.name != '/'" t-field="o.name"/>
             </h2>
         </xpath>
+        <xpath expr="//tbody[1]/t[3]/tr/t[3]" position="after">
+            <t t-if="line.display_type == 'line_title' or line.display_type == 'line_subtotal'">
+                <td colspan="99">
+                    <b><span t-field="line.name" /></b>
+                </td>
+            </t>
+        </xpath>
 
     </template>
 
