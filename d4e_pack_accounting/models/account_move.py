@@ -80,14 +80,97 @@ class AccountMove(models.Model):
                     line_vals_list)
                 subtotal = 0
 
-    # @api.model
-    # def create(self, vals):
-    #     if not self._context.get('request_from_action_subtotal'):
-    #         for move in self:
-    #             move.action_subtotal()
-    #             move.add_subtotal()
-    #     res = super(AccountMove, self).create(vals)
-    #     return res
+    def action_subtotal_create(self):
+        for l in self.invoice_line_ids:
+            if l.new_line:
+                res = l.unlink()
+        subtotal = 0
+        section_1 = False
+        section_2 = False
+        seq = 0
+        invoice_line_ids = self.env["account.move.line"].search([
+            ('move_id', '=', self.id),
+            ('exclude_from_invoice_tab', '=', False), ('display_type', '!=', 'line_subtotal')])
+        line_index = 1
+        for line in invoice_line_ids:
+            line.sequence = line_index
+            line_index += 1
+            if line.display_type == 'line_section':
+                section_1 = True
+            if line.display_type == 'line_section' and subtotal:
+                section_2 = True
+            if not line.display_type and section_1:
+                subtotal += line.price_subtotal
+            if section_2 and subtotal != 0:
+                line_vals_list = {
+                  'sequence': line.sequence,
+                  'name': _('Sub-Total:    ') + str("%.2f" % subtotal)+' '+line.currency_id.symbol,
+                  'currency_id': line.currency_id.symbol,
+                  'quantity': 1,
+                  'currency_id': 5,
+                  'tax_exigible': True,
+                  'display_type': 'line_sub_total',
+                  'new_line': True,
+                  'move_id': self.id
+                }
+
+                new_line = self.env['account.move.line'].create(line_vals_list)
+                line_index += 1
+                line.sequence = line_index
+                subtotal = 0
+                section_2 = False
+            seq = line.sequence
+        if subtotal != 0:
+            line_vals_list = {
+              'sequence': seq,
+              'name': _('Sub-Total:      ')+str("%.2f" % subtotal)+' '+line.currency_id.symbol,
+              'currency_id': line.currency_id.symbol,
+              'quantity': 1,
+              'currency_id': 5,
+              'tax_exigible': True,
+              'display_type': 'line_sub_total',
+              'new_line': True,
+              'move_id': self.id
+            }
+            new_line = self.env['account.move.line'].with_context(request_from_action_subtotal=True).create(line_vals_list)
+
+
+    def add_subtotal_create(self):
+        subtotal = 0
+        seq = 0
+        invoice_line_ids = self.env["account.move.line"].search([
+            ('move_id', '=', self.id),
+            ('exclude_from_invoice_tab', '=', False)])
+        line_index = 1
+        for line in invoice_line_ids:
+            line_index += 1
+            line.sequence = line_index
+            if not line.display_type:
+                subtotal += line.price_subtotal
+            if line.display_type == 'line_subtotal':
+                seq = line.sequence
+                line_vals_list = {
+                    'sequence': seq,
+                    'name': _('Sub-Total-manuel:      ')+str("%.2f" % subtotal) + ' ' + line.currency_id.symbol,
+                    'currency_id': line.currency_id.symbol,
+                    'quantity': 1,
+                    'currency_id': 5,
+                    'tax_exigible': True,
+                    'display_type': 'line_subtotal',
+                    'new_line': False,
+                    'move_id': self.id
+                }
+                new_line = line.write(
+                    line_vals_list)
+                subtotal = 0
+    @api.model
+    def create(self, vals):
+        res = super(AccountMove, self).create(vals)
+        if not self._context.get('request_from_action_subtotal'):
+            for move in res:
+                move.action_subtotal_create()
+                move.add_subtotal_create()
+        return res
 
 
 
