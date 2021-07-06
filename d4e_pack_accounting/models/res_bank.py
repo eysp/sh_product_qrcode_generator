@@ -36,6 +36,11 @@ class ResBank(models.Model):
         reponse = requests.get(url).json()
         for rec in reponse['entries']:
             swissbank_id = str(rec.get('group') or '') + str(rec.get('iid') or '') + str(rec.get('branchId') or '') + str(rec.get('sicIid') or '') + str(rec.get('headOffice') or '')
+            idd = ''
+            if rec.get('newIid'):
+                idd = str(rec.get('newIid'))
+            else:
+                idd = str(rec.get('iid'))
             bank_vals = {
                 'name': rec.get('bankOrInstitutionName') or '',
                 'phone': rec.get('phone') or '',
@@ -43,6 +48,7 @@ class ResBank(models.Model):
                 'street': rec.get('domicileAddress') or '',
                 'city': rec.get('place') or '',
                 'bic': rec.get('bic') or '',
+                'clearing': idd or '',
                 'swissbank_id': swissbank_id,
             }
             bank = self.env["res.bank"].search([('swissbank_id', '=', bank_vals['swissbank_id'])])

@@ -2,8 +2,12 @@
 <odoo>
     <data>
         <template id="assets_backend" name="hr_recruitment assets" inherit_id="web.assets_backend">
+             <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/d4e_pack_accounting/static/src/scss/style.scss"/>
+            </xpath>
             <xpath expr="." position="inside">
                 <script type="text/javascript" src="/d4e_pack_accounting/static/src/js/script.js"></script>
+                <script type="text/javascript" src="/d4e_pack_accounting/static/src/js/line_sub_total.js"></script>
             </xpath>
         </template>
     </data>

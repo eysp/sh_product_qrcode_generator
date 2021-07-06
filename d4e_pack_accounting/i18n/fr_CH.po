@@ -196,3 +196,38 @@ msgstr "Incrémenter"
 #: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__customer_no
 msgid "Customer no."
 msgstr "N° de client"
+
+#. module: d4e_pack_accounting
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
+#: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_order_form
+msgid "Add a subtotal"
+msgstr "Ajouter un sous-total"
+
+#. module: d4e_pack_accounting
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__account_move_line__display_type__line_sub_total
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__account_move_line__display_type__line_subtotal
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__sale_order_line__display_type__line_sub_total
+#: model:ir.model.fields.selection,name:d4e_pack_accounting.selection__sale_order_line__display_type__line_subtotal
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#, python-format
+msgid "Sub-Total-manuel:      "
+msgstr "Sous-Total-manuel:      "
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#: code:addons/d4e_pack_accounting/models/sale_order.py:0
+#, python-format
+msgid "Sub-Total:    "
+msgstr "Sous-Total:      "
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/account_move.py:0
+#, python-format
+msgid "Sub-Total:      "
+msgstr "Sous-Total:      "
