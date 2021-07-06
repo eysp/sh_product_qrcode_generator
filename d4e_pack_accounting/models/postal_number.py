@@ -7,6 +7,7 @@ import requests
 class PostalNumber(models.Model):
     _description = 'Postal Number'
     _name = 'postal.number'
+    _rec_name = 'ortbez18'
 
     onrp = fields.Char(string='Identifiant')
     bfsnr = fields.Char(string='N° OFS')
