@@ -17,7 +17,17 @@
                 </tree>
             </field>
         </record>
-
+        <record id="postal_number_view_search" model="ir.ui.view">
+            <field name="name">postal.number.view.search</field>
+            <field name="model">postal.number</field>
+            <field name="arch" type="xml">
+                <search string="Search Postal numbers">
+                    <field name="gplz"/>
+                    <field name="ortbez18"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
         <record id="action_postal_numbers" model="ir.actions.act_window">
             <field name="name">postal number</field>
             <field name="type">ir.actions.act_window</field>
