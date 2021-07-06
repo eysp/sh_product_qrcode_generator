@@ -6,6 +6,8 @@ from odoo import models, fields, api, _
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    update_sequence = fields.Char(string='Update sequence')
+
     def action_subtotal(self):
         for l in self.order_line:
             if l.new_line:
@@ -34,11 +36,8 @@ class SaleOrder(models.Model):
                     'new_line': True,
                     'order_id': self.id
                 }
-                if line.display_type == 'line_sub_total':
-                    line.with_context(request_from_action_subtotal=True).write(line_vals_list)
-                else:
-                    new_line = self.env['sale.order.line'].with_context(request_from_action_subtotal=True).create(
-                        line_vals_list)
+
+                new_line = self.env['sale.order.line'].create(line_vals_list)
                 subtotal = 0
                 section_2 = False
             seq = line.sequence
@@ -53,11 +52,7 @@ class SaleOrder(models.Model):
                 'new_line': True,
                 'order_id': self.id
             }
-            subtotal = 0
-            if line.display_type == 'line_sub_total':
-                line.with_context(request_from_action_subtotal=True).write(line_vals_list)
-            else:
-                new_line = self.env['sale.order.line'].with_context(request_from_action_subtotal=True).create(line_vals_list)
+            new_line = self.env['sale.order.line'].with_context(request_from_action_subtotal=True).create(line_vals_list)
 
     def add_subtotal(self):
         subtotal = 0
@@ -84,16 +79,16 @@ class SaleOrder(models.Model):
                 subtotal = 0
 
     def action_subtotal_create(self):
-        for l in self.order_line:
-            if l.new_line:
-                res = l.unlink()
         subtotal = 0
         section_1 = False
         section_2 = False
         seq = 0
         order_line = self.env["sale.order.line"].search([
-            ('order_id', '=', self.id)], order="sequence")
+            ('order_id', '=', self.id)])
+        line_index = 1
         for line in order_line:
+            line.sequence = line_index
+            line_index += 1
             if line.display_type == 'line_section':
                 section_1 = True
             if line.display_type == 'line_section' and subtotal:
@@ -102,8 +97,13 @@ class SaleOrder(models.Model):
             if not line.display_type and section_1:
                 subtotal += line.price_subtotal
             if section_2 and subtotal != 0:
+                increment_sequence_order_line = self.env["sale.order.line"].search([
+                    ('order_id', '=', self.id),
+                    ('sequence', '>=', line.sequence)], order="sequence DESC")
+                for element in increment_sequence_order_line:
+                    element.sequence = element.sequence + 2
                 line_vals_list = {
-                    'sequence': seq,
+                    'sequence': line_index,
                     'name': _('Sub-Total:      ') + str("%.2f" % subtotal) + ' ' + line.currency_id.symbol,
                     'currency_id': line.currency_id.symbol,
                     'currency_id': 5,
@@ -112,8 +112,8 @@ class SaleOrder(models.Model):
                     'new_line': True,
                     'order_id': self.id
                 }
-                new_line = self.env['sale.order.line'].with_context(request_from_action_subtotal=True).create(
-                        line_vals_list)
+                new_line = self.env['sale.order.line'].create(line_vals_list)
+                line_index += line.sequence
                 subtotal = 0
                 section_2 = False
             seq = line.sequence
@@ -128,7 +128,6 @@ class SaleOrder(models.Model):
                 'new_line': True,
                 'order_id': self.id
             }
-            subtotal = 0
             new_line = self.env['sale.order.line'].with_context(request_from_action_subtotal=True).create(line_vals_list)
 
     def add_subtotal_create(self):
@@ -136,7 +135,10 @@ class SaleOrder(models.Model):
         seq = 0
         order_line = self.env["sale.order.line"].search([
             ('order_id', '=', self.id)])
+        line_index = 1
         for line in order_line:
+            line_index += 1
+            line.sequence = line_index
             if not line.display_type:
                 subtotal += line.price_subtotal
             if line.display_type == 'line_subtotal':
@@ -171,6 +173,7 @@ class SaleOrder(models.Model):
             for order in res:
                 order.action_subtotal_create()
                 order.add_subtotal_create()
+        res.write({'update_sequence': 'test'})
         return res
 
 
@@ -189,6 +192,5 @@ class SaleOrderLine(models.Model):
         return res
 
     def write(self, values):
-
         result = super(SaleOrderLine, self).write(values)
         return result

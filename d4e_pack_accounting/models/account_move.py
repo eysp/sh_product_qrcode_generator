@@ -6,6 +6,8 @@ from odoo import api, fields, models, _
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
+    update_sequence = fields.Char(string='Update sequence')
+
     def action_subtotal(self):
         for l in self.invoice_line_ids:
             if l.new_line:
@@ -90,7 +92,7 @@ class AccountMove(models.Model):
         seq = 0
         invoice_line_ids = self.env["account.move.line"].search([
             ('move_id', '=', self.id),
-            ('exclude_from_invoice_tab', '=', False), ('display_type', '!=', 'line_subtotal')])
+            ('exclude_from_invoice_tab', '=', False)])
         line_index = 1
         for line in invoice_line_ids:
             line.sequence = line_index
@@ -102,8 +104,14 @@ class AccountMove(models.Model):
             if not line.display_type and section_1:
                 subtotal += line.price_subtotal
             if section_2 and subtotal != 0:
+                increment_sequence_invoice_line_ids = self.env["account.move.line"].search([
+                    ('move_id', '=', self.id),
+                    ('sequence', '>=', line.sequence),
+                    ('exclude_from_invoice_tab', '=', False)], order="sequence DESC")
+                for element in increment_sequence_invoice_line_ids:
+                    element.sequence = element.sequence + 2
                 line_vals_list = {
-                  'sequence': line.sequence,
+                  'sequence': line_index,
                   'name': _('Sub-Total:    ') + str("%.2f" % subtotal)+' '+line.currency_id.symbol,
                   'currency_id': line.currency_id.symbol,
                   'quantity': 1,
@@ -115,8 +123,7 @@ class AccountMove(models.Model):
                 }
 
                 new_line = self.env['account.move.line'].create(line_vals_list)
-                line_index += 1
-                line.sequence = line_index
+                line_index += line.sequence
                 subtotal = 0
                 section_2 = False
             seq = line.sequence
@@ -170,6 +177,7 @@ class AccountMove(models.Model):
             for move in res:
                 move.action_subtotal_create()
                 move.add_subtotal_create()
+        res.write({'update_sequence' : 'test'})
         return res
 
 
