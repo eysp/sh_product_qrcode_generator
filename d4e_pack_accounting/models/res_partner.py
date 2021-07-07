@@ -16,21 +16,22 @@ class ResPartner(models.Model):
 
     customer_no = fields.Integer(string="Customer no.", default=compute_customer_no)
     phone_2 = fields.Char(string="Phone 2")
-    city = fields.Many2one('postal.number', string='City', ondelete='restrict')
+    postal_number_city_id = fields.Many2one('postal.number', string='City', ondelete='restrict')
 
     @api.onchange('zip')
     def on_change_zip(self):
         if self.zip:
-            return {'domain': {'city': [('gplz', '=', self.zip)]}}
+            return {'domain': {'postal_number_city_id': [('gplz', '=', self.zip)]}}
         else:
-            self.city = {}
-            return {'domain': {'city': []}}
+            self.postal_number_city_id = {}
+            return {'domain': {'postal_number_city_id': []}}
 
 
-    @api.onchange('city')
+    @api.onchange('postal_number_city_id')
     def on_change_city(self):
-        if self.city:
-            self.zip = self.city.gplz
+        if self.postal_number_city_id:
+            self.zip = self.postal_number_city_id.gplz
+            self.city = self.postal_number_city_id.ortbez18
 
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):

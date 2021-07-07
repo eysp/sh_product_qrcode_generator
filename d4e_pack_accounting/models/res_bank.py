@@ -16,7 +16,7 @@ class ResBank(models.Model):
         res = super(ResBank, self).name_get()
         result = []
         for bank in self:
-            name = bank.name + (bank.clearing and (' - ' + bank.clearing) or '') + (bank.bic and (' - ' + bank.bic) or '')
+            name = bank.name + (bank.clearing and (' - ' + bank.clearing) or '') + (bank.city and (' - ' + bank.city) or '') + (bank.bic and (' - ' + bank.bic) or '')
             result.append((bank.id, name))
         return result
 
