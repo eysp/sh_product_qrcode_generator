@@ -14,6 +14,42 @@
         </function>
     </data>
 
+    <data >
+        <record id="reconcile_customer_discount" model="account.reconcile.model">
+            <field name="name">Customer discount</field>
+            <field name="rule_type">writeoff_button</field>
+        </record>
+
+        <record id="reconcile_customer_discount_line_1" model="account.reconcile.model.line">
+            <field name="model_id" ref="d4e_default_data.reconcile_customer_discount"/>
+            <field name="sequence">2</field>
+            <field name="account_id" model="account.account"
+                   search="[('code', '=', 3800)]"/>
+            <field name="amount_type">percentage</field>
+            <field name="amount_string">100</field>
+            <field name="tax_ids" model="account.tax"
+                   search="[('name', '=', 'VAT 7.7% sales excl.')]"/>
+            <field name="force_tax_included">True</field>
+        </record>
+
+        <record id="reconcile_supplier_discount" model="account.reconcile.model">
+            <field name="name">Supplier discount</field>
+            <field name="rule_type">writeoff_button</field>
+        </record>
+
+        <record id="reconcile_supplier_discount_line_1" model="account.reconcile.model.line">
+            <field name="model_id" ref="d4e_default_data.reconcile_supplier_discount"/>
+            <field name="sequence">2</field>
+            <field name="account_id" model="account.account"
+                search="[('code', '=', 4900)]"/>
+            <field name="amount_type">percentage</field>
+            <field name="amount_string">100</field>
+            <field name="tax_ids" model="account.tax"
+                search="[('name', '=', 'VAT 7.7% purchase of goods including VAT.')]"/>
+            <field name="force_tax_included">True</field>
+        </record>
+    </data>
+
     <data>
 
         <record id="account_payment_term_15_days" model="account.payment.term">

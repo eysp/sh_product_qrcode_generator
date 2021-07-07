@@ -24,6 +24,7 @@
             <field name="active">1</field>
             <field name="sequence">0</field>
             <field name="type_tax_use">sale</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_77_purchase_incl" model="account.tax">
@@ -63,6 +64,7 @@
             <field name="active">0</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">sale</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_25_purchase" model="account.tax">
@@ -78,6 +80,7 @@
             <field name="active">1</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_25_invest" model="account.tax">
@@ -94,6 +97,7 @@
             <field name="active">1</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_37" model="account.tax">
@@ -110,6 +114,7 @@
             <field name="active">0</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">sale</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_37_purchase" model="account.tax">
@@ -125,6 +130,7 @@
             <field name="active">0</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_37_invest" model="account.tax">
@@ -141,6 +147,7 @@
             <field name="active">1</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_77_invest" model="account.tax">
@@ -157,6 +164,7 @@
             <field name="active">1</field>
             <field name="sequence">1</field>
             <field name="type_tax_use">purchase</field>
+            <field name="price_include" eval="1"/>
         </record>
 
         <record id="1_vat_XO" model="account.tax">
