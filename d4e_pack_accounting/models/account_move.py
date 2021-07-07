@@ -6,6 +6,7 @@ from odoo import api, fields, models, _
 class AccountMove(models.Model):
     _inherit = 'account.move'
 
+    internal_reference = fields.Char(string='Internal Reference')
     update_sequence = fields.Char(string='Update sequence')
 
     def action_subtotal(self):

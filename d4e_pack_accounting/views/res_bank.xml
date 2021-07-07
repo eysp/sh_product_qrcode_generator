@@ -29,13 +29,14 @@
             <field name="inherit_id" ref="base.res_bank_view_search"/>
             <field name="arch" type="xml">
                  <field name="name" position="after">
+                    <field name="clearing"/>
                     <field name="zip"/>
                     <field name="city"/>
                 </field>
             </field>
         </record>
 
-<!--         <function model="res.bank" name="create_bank_with_api"/>-->
+         <function model="res.bank" name="create_bank_with_api"/>
 
     </data>
 </odoo>
