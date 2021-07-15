@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Miscellaneous Operations')]).ids"/>
+            <value eval="'Miscellaneous Operations'"/>
+            <value eval="'Opérations diverses'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Customer Invoices')]).ids"/>
+            <value eval="'Customer Invoices'"/>
+            <value eval="'Factures clients'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Vendor Bills')]).ids"/>
+            <value eval="'Vendor Bills'"/>
+            <value eval="'Factures fournisseurs'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Exchange Difference')]).ids"/>
+            <value eval="'Exchange Difference'"/>
+            <value eval="'Différences de change'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Bank')]).ids"/>
+            <value eval="'Bank'"/>
+            <value eval="'Banque'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash')]).ids"/>
+            <value eval="'Cash'"/>
+            <value eval="'Caisse'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'fr_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash Basis Taxes')]).ids"/>
+            <value eval="'Cash Basis Taxes'"/>
+            <value eval="'TVA sur encaissements'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Miscellaneous Operations')]).ids"/>
+            <value eval="'Miscellaneous Operations'"/>
+            <value eval="'Sonstige Operationen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Customer Invoices')]).ids"/>
+            <value eval="'Customer Invoices'"/>
+            <value eval="'Kundenrechnungen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Vendor Bills')]).ids"/>
+            <value eval="'Vendor Bills'"/>
+            <value eval="'Lieferantenrechnungen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Exchange Difference')]).ids"/>
+            <value eval="'Exchange Difference'"/>
+            <value eval="'Wechselkursdifferenzen'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Bank')]).ids"/>
+            <value eval="'Bank'"/>
+            <value eval="'Bank'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash')]).ids"/>
+            <value eval="'Cash'"/>
+            <value eval="'Kasse'"/>
+        </function>
+        <function model="ir.translation" name="create_or_update_translations">
+            <value model="ir.translation" eval="obj().search([]).ids"/>
+            <value eval="'account.journal,name'"/>
+            <value eval="'de_CH'"/>
+            <value model="account.journal" eval="obj().search([('name', '=', 'Cash Basis Taxes')]).ids"/>
+            <value eval="'Cash Basis Taxes'"/>
+            <value eval="'Steuern auf Kassenbasis'"/>
+        </function>
+    </data>
+
+</odoo>

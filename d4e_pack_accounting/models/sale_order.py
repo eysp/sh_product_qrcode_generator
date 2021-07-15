@@ -194,3 +194,4 @@ class SaleOrderLine(models.Model):
     def write(self, values):
         result = super(SaleOrderLine, self).write(values)
         return result
+

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 07:27+0000\n"
-"PO-Revision-Date: 2021-06-22 07:27+0000\n"
+"POT-Creation-Date: 2021-07-15 13:06+0000\n"
+"PO-Revision-Date: 2021-07-15 13:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,32 +16,62 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_O_exclude
+#: model:account.tax,name:d4e_default_data.10_vat_O_exclude
+#: model:account.tax,name:d4e_default_data.11_vat_O_exclude
+#: model:account.tax,name:d4e_default_data.12_vat_O_exclude
+#: model:account.tax,name:d4e_default_data.13_vat_O_exclude
+#: model:account.tax,name:d4e_default_data.14_vat_O_exclude
+#: model:account.tax.template,name:d4e_default_data.vat_O_exclude
 msgid "0% VAT excluded"
 msgstr "TVA 0% exclue"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_other_movements_910
+#: model:account.tax,description:d4e_default_data.10_vat_other_movements_910
+#: model:account.tax,description:d4e_default_data.11_vat_other_movements_910
+#: model:account.tax,description:d4e_default_data.12_vat_other_movements_910
+#: model:account.tax,description:d4e_default_data.13_vat_other_movements_910
+#: model:account.tax,description:d4e_default_data.14_vat_other_movements_910
+#: model:account.tax.template,description:d4e_default_data.vat_other_movements_910
 msgid "0% donations"
 msgstr "0% dons"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_O_exclude
+#: model:account.tax,description:d4e_default_data.10_vat_O_exclude
+#: model:account.tax,description:d4e_default_data.11_vat_O_exclude
+#: model:account.tax,description:d4e_default_data.12_vat_O_exclude
+#: model:account.tax,description:d4e_default_data.13_vat_O_exclude
+#: model:account.tax,description:d4e_default_data.14_vat_O_exclude
+#: model:account.tax.template,description:d4e_default_data.vat_O_exclude
 msgid "0% excl."
 msgstr "0% excl."
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_XO
+#: model:account.tax,name:d4e_default_data.10_vat_XO
+#: model:account.tax,name:d4e_default_data.11_vat_XO
+#: model:account.tax,name:d4e_default_data.12_vat_XO
+#: model:account.tax,name:d4e_default_data.13_vat_XO
+#: model:account.tax,name:d4e_default_data.14_vat_XO
+#: model:account.tax.template,name:d4e_default_data.vat_XO
 msgid "0% export VAT"
 msgstr "TVA 0% export"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_O_import
+#: model:account.tax,description:d4e_default_data.10_vat_O_import
+#: model:account.tax,description:d4e_default_data.11_vat_O_import
+#: model:account.tax,description:d4e_default_data.12_vat_O_import
+#: model:account.tax,description:d4e_default_data.13_vat_O_import
+#: model:account.tax,description:d4e_default_data.14_vat_O_import
+#: model:account.tax.template,description:d4e_default_data.vat_O_import
 msgid "0% import."
 msgstr "0% import."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_other_movements_900
+#: model:account.tax,description:d4e_default_data.10_vat_other_movements_900
+#: model:account.tax,description:d4e_default_data.11_vat_other_movements_900
+#: model:account.tax,description:d4e_default_data.12_vat_other_movements_900
+#: model:account.tax,description:d4e_default_data.13_vat_other_movements_900
+#: model:account.tax,description:d4e_default_data.14_vat_other_movements_900
+#: model:account.tax.template,description:d4e_default_data.vat_other_movements_900
 msgid "0% subventions"
 msgstr "0% subventions"
 
@@ -51,77 +81,152 @@ msgid "10 Days"
 msgstr "10 jours"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_100_import
+#: model:account.tax,description:d4e_default_data.10_vat_100_import
+#: model:account.tax,description:d4e_default_data.11_vat_100_import
+#: model:account.tax,description:d4e_default_data.12_vat_100_import
+#: model:account.tax,description:d4e_default_data.13_vat_100_import
+#: model:account.tax,description:d4e_default_data.14_vat_100_import
+#: model:account.tax.template,description:d4e_default_data.vat_100_import
 msgid "100% imp."
 msgstr "100% imp."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_100_import_invest
+#: model:account.tax,description:d4e_default_data.10_vat_100_import_invest
+#: model:account.tax,description:d4e_default_data.11_vat_100_import_invest
+#: model:account.tax,description:d4e_default_data.12_vat_100_import_invest
+#: model:account.tax,description:d4e_default_data.13_vat_100_import_invest
+#: model:account.tax,description:d4e_default_data.14_vat_100_import_invest
+#: model:account.tax.template,description:d4e_default_data.vat_100_import_invest
 msgid "100% imp.invest."
 msgstr "100% imp.invest."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_25
+#: model:account.tax,description:d4e_default_data.10_vat_25
+#: model:account.tax,description:d4e_default_data.11_vat_25
+#: model:account.tax,description:d4e_default_data.12_vat_25
+#: model:account.tax,description:d4e_default_data.13_vat_25
+#: model:account.tax,description:d4e_default_data.14_vat_25
+#: model:account.tax.template,description:d4e_default_data.vat_25
 msgid "2.5%"
 msgstr "2.5%"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_25_incl
+#: model:account.tax,description:d4e_default_data.10_vat_25_incl
+#: model:account.tax,description:d4e_default_data.11_vat_25_incl
+#: model:account.tax,description:d4e_default_data.12_vat_25_incl
+#: model:account.tax,description:d4e_default_data.13_vat_25_incl
+#: model:account.tax,description:d4e_default_data.14_vat_25_incl
+#: model:account.tax.template,description:d4e_default_data.vat_25_incl
 msgid "2.5% Incl."
 msgstr "2.5% Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_25_purchase_incl
+#: model:account.tax,name:d4e_default_data.10_vat_25_purchase_incl
+#: model:account.tax,name:d4e_default_data.11_vat_25_purchase_incl
+#: model:account.tax,name:d4e_default_data.12_vat_25_purchase_incl
+#: model:account.tax,name:d4e_default_data.13_vat_25_purchase_incl
+#: model:account.tax,name:d4e_default_data.14_vat_25_purchase_incl
+#: model:account.tax.template,name:d4e_default_data.vat_25_purchase_incl
 msgid "2.5% VAT purchase of goods including VAT"
 msgstr "TVA 2.5% achat marchandise TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_25_invest
+#: model:account.tax,description:d4e_default_data.10_vat_25_invest
+#: model:account.tax,description:d4e_default_data.11_vat_25_invest
+#: model:account.tax,description:d4e_default_data.12_vat_25_invest
+#: model:account.tax,description:d4e_default_data.13_vat_25_invest
+#: model:account.tax,description:d4e_default_data.14_vat_25_invest
+#: model:account.tax.template,description:d4e_default_data.vat_25_invest
 msgid "2.5% invest."
 msgstr "2.5% invest."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_25_invest_incl
+#: model:account.tax,description:d4e_default_data.10_vat_25_invest_incl
+#: model:account.tax,description:d4e_default_data.11_vat_25_invest_incl
+#: model:account.tax,description:d4e_default_data.12_vat_25_invest_incl
+#: model:account.tax,description:d4e_default_data.13_vat_25_invest_incl
+#: model:account.tax,description:d4e_default_data.14_vat_25_invest_incl
+#: model:account.tax.template,description:d4e_default_data.vat_25_invest_incl
 msgid "2.5% invest. Incl."
 msgstr "2.5% invest. Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_25_purchase
+#: model:account.tax,description:d4e_default_data.10_vat_25_purchase
+#: model:account.tax,description:d4e_default_data.11_vat_25_purchase
+#: model:account.tax,description:d4e_default_data.12_vat_25_purchase
+#: model:account.tax,description:d4e_default_data.13_vat_25_purchase
+#: model:account.tax,description:d4e_default_data.14_vat_25_purchase
+#: model:account.tax.template,description:d4e_default_data.vat_25_purchase
 msgid "2.5% purchase"
 msgstr "2.5% achat"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_25_purchase_incl
-msgid "2.5% purchase Incl. "
+#: model:account.tax,description:d4e_default_data.10_vat_25_purchase_incl
+#: model:account.tax,description:d4e_default_data.11_vat_25_purchase_incl
+#: model:account.tax,description:d4e_default_data.12_vat_25_purchase_incl
+#: model:account.tax,description:d4e_default_data.13_vat_25_purchase_incl
+#: model:account.tax,description:d4e_default_data.14_vat_25_purchase_incl
+#: model:account.tax.template,description:d4e_default_data.vat_25_purchase_incl
+msgid "2.5% purchase Incl."
 msgstr "2.5% achat Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_37
+#: model:account.tax,description:d4e_default_data.10_vat_37
+#: model:account.tax,description:d4e_default_data.11_vat_37
+#: model:account.tax,description:d4e_default_data.12_vat_37
+#: model:account.tax,description:d4e_default_data.13_vat_37
+#: model:account.tax,description:d4e_default_data.14_vat_37
+#: model:account.tax.template,description:d4e_default_data.vat_37
 msgid "3.7%"
 msgstr "3.7%"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_37_incl
+#: model:account.tax,description:d4e_default_data.10_vat_37_incl
+#: model:account.tax,description:d4e_default_data.11_vat_37_incl
+#: model:account.tax,description:d4e_default_data.12_vat_37_incl
+#: model:account.tax,description:d4e_default_data.13_vat_37_incl
+#: model:account.tax,description:d4e_default_data.14_vat_37_incl
+#: model:account.tax.template,description:d4e_default_data.vat_37_incl
 msgid "3.7% Incl."
 msgstr "3.7% Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_37_invest
+#: model:account.tax,description:d4e_default_data.10_vat_37_invest
+#: model:account.tax,description:d4e_default_data.11_vat_37_invest
+#: model:account.tax,description:d4e_default_data.12_vat_37_invest
+#: model:account.tax,description:d4e_default_data.13_vat_37_invest
+#: model:account.tax,description:d4e_default_data.14_vat_37_invest
+#: model:account.tax.template,description:d4e_default_data.vat_37_invest
 msgid "3.7% invest"
 msgstr "3.7% invest"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_37_invest_incl
+#: model:account.tax,description:d4e_default_data.10_vat_37_invest_incl
+#: model:account.tax,description:d4e_default_data.11_vat_37_invest_incl
+#: model:account.tax,description:d4e_default_data.12_vat_37_invest_incl
+#: model:account.tax,description:d4e_default_data.13_vat_37_invest_incl
+#: model:account.tax,description:d4e_default_data.14_vat_37_invest_incl
+#: model:account.tax.template,description:d4e_default_data.vat_37_invest_incl
 msgid "3.7% invest Incl."
 msgstr "3.7% invest Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_37_purchase
+#: model:account.tax,description:d4e_default_data.10_vat_37_purchase
+#: model:account.tax,description:d4e_default_data.11_vat_37_purchase
+#: model:account.tax,description:d4e_default_data.12_vat_37_purchase
+#: model:account.tax,description:d4e_default_data.13_vat_37_purchase
+#: model:account.tax,description:d4e_default_data.14_vat_37_purchase
+#: model:account.tax.template,description:d4e_default_data.vat_37_purchase
 msgid "3.7% purchase"
 msgstr "3.7% achat"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_37_purchase_incl
+#: model:account.tax,description:d4e_default_data.10_vat_37_purchase_incl
+#: model:account.tax,description:d4e_default_data.11_vat_37_purchase_incl
+#: model:account.tax,description:d4e_default_data.12_vat_37_purchase_incl
+#: model:account.tax,description:d4e_default_data.13_vat_37_purchase_incl
+#: model:account.tax,description:d4e_default_data.14_vat_37_purchase_incl
+#: model:account.tax.template,description:d4e_default_data.vat_37_purchase_incl
 msgid "3.7% purchase Incl."
 msgstr "3.7% achat Incl."
 
@@ -146,48 +251,100 @@ msgid "45 Days"
 msgstr "45 jours"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77
+#: model:account.tax,description:d4e_default_data.10_vat_77
+#: model:account.tax,description:d4e_default_data.11_vat_77
+#: model:account.tax,description:d4e_default_data.12_vat_77
+#: model:account.tax,description:d4e_default_data.13_vat_77
+#: model:account.tax,description:d4e_default_data.14_vat_77
+#: model:account.tax.template,description:d4e_default_data.vat_77
 msgid "7.7%"
 msgstr "7.7%"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77_incl
+#: model:account.tax,description:d4e_default_data.10_vat_77_incl
+#: model:account.tax,description:d4e_default_data.11_vat_77_incl
+#: model:account.tax,description:d4e_default_data.12_vat_77_incl
+#: model:account.tax,description:d4e_default_data.13_vat_77_incl
+#: model:account.tax,description:d4e_default_data.14_vat_77_incl
+#: model:account.tax.template,description:d4e_default_data.vat_77_incl
 msgid "7.7% Incl."
 msgstr "7.7% Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77_invest
+#: model:account.tax,description:d4e_default_data.10_vat_77_invest
+#: model:account.tax,description:d4e_default_data.11_vat_77_invest
+#: model:account.tax,description:d4e_default_data.12_vat_77_invest
+#: model:account.tax,description:d4e_default_data.13_vat_77_invest
+#: model:account.tax,description:d4e_default_data.14_vat_77_invest
+#: model:account.tax.template,description:d4e_default_data.vat_77_invest
 msgid "7.7% invest."
 msgstr "7.7% invest."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77_invest_incl
+#: model:account.tax,description:d4e_default_data.10_vat_77_invest_incl
+#: model:account.tax,description:d4e_default_data.11_vat_77_invest_incl
+#: model:account.tax,description:d4e_default_data.12_vat_77_invest_incl
+#: model:account.tax,description:d4e_default_data.13_vat_77_invest_incl
+#: model:account.tax,description:d4e_default_data.14_vat_77_invest_incl
+#: model:account.tax.template,description:d4e_default_data.vat_77_invest_incl
 msgid "7.7% invest. Incl."
 msgstr "7.7% invest. Incl."
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77_purchase
-#: model:account.tax,description:d4e_default_data.1_vat_77_purchase_reverse
+#: model:account.tax,description:d4e_default_data.10_vat_77_purchase
+#: model:account.tax,description:d4e_default_data.10_vat_77_purchase_reverse
+#: model:account.tax,description:d4e_default_data.11_vat_77_purchase
+#: model:account.tax,description:d4e_default_data.11_vat_77_purchase_reverse
+#: model:account.tax,description:d4e_default_data.12_vat_77_purchase
+#: model:account.tax,description:d4e_default_data.12_vat_77_purchase_reverse
+#: model:account.tax,description:d4e_default_data.13_vat_77_purchase
+#: model:account.tax,description:d4e_default_data.13_vat_77_purchase_reverse
+#: model:account.tax,description:d4e_default_data.14_vat_77_purchase
+#: model:account.tax,description:d4e_default_data.14_vat_77_purchase_reverse
+#: model:account.tax.template,description:d4e_default_data.vat_77_purchase
+#: model:account.tax.template,description:d4e_default_data.vat_77_purchase_reverse
 msgid "7.7% purchase"
 msgstr "7.7% achat"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77_purchase_return
+#: model:account.tax,description:d4e_default_data.10_vat_77_purchase_return
+#: model:account.tax,description:d4e_default_data.11_vat_77_purchase_return
+#: model:account.tax,description:d4e_default_data.12_vat_77_purchase_return
+#: model:account.tax,description:d4e_default_data.13_vat_77_purchase_return
+#: model:account.tax,description:d4e_default_data.14_vat_77_purchase_return
+#: model:account.tax.template,description:d4e_default_data.vat_77_purchase_return
 msgid "7.7% purchase (return)"
 msgstr "7.7% achat (return)"
 
 #. module: d4e_default_data
-#: model:account.tax,description:d4e_default_data.1_vat_77_purchase_incl
+#: model:account.tax,description:d4e_default_data.10_vat_77_purchase_incl
+#: model:account.tax,description:d4e_default_data.11_vat_77_purchase_incl
+#: model:account.tax,description:d4e_default_data.12_vat_77_purchase_incl
+#: model:account.tax,description:d4e_default_data.13_vat_77_purchase_incl
+#: model:account.tax,description:d4e_default_data.14_vat_77_purchase_incl
+#: model:account.tax.template,description:d4e_default_data.vat_77_purchase_incl
 msgid "7.7% purchase Incl."
 msgstr "7.7% achat Incl."
 
 #. module: d4e_default_data
+#: model:ir.model,name:d4e_default_data.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Modèle de plan comptable"
+
+#. module: d4e_default_data
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_move__display_name
 #: model:ir.model.fields,field_description:d4e_default_data.field_account_reconcile_model__display_name
 msgid "Display Name"
 msgstr "Nom affiché"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_other_movements_910
+#: model:account.tax,name:d4e_default_data.10_vat_other_movements_910
+#: model:account.tax,name:d4e_default_data.11_vat_other_movements_910
+#: model:account.tax,name:d4e_default_data.12_vat_other_movements_910
+#: model:account.tax,name:d4e_default_data.13_vat_other_movements_910
+#: model:account.tax,name:d4e_default_data.14_vat_other_movements_910
+#: model:account.tax.template,name:d4e_default_data.vat_other_movements_910
 msgid "Donations, dividends, compensation at 0%"
 msgstr "Dons, dividendes, dédommagements à 0%"
 
@@ -196,13 +353,40 @@ msgstr "Dons, dividendes, dédommagements à 0%"
 msgid "End of the following month"
 msgstr "Fin du mois suivant"
 
+
 #. module: d4e_default_data
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_bank_statement_line__internal_reference
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_move__internal_reference
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_payment__internal_reference
+msgid "Internal Reference"
+msgstr "Référence interne"
+
+#. module: d4e_default_data
+#: code:addons/d4e_default_data/models/account_model.py:0
+#, python-format
+msgid "Invoices Matching Rule"
+msgstr "Règle de rapprochement des factures"
+
+#. module: d4e_default_data
+#: model:ir.model,name:d4e_default_data.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: d4e_default_data
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_chart_template____last_update
+#: model:ir.model.fields,field_description:d4e_default_data.field_account_move____last_update
 #: model:ir.model.fields,field_description:d4e_default_data.field_account_reconcile_model____last_update
 msgid "Last Modified on"
 msgstr "Dernière modification le"
 
+
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.account_tax_55_ee0a4534
+#: model:account.tax,name:d4e_default_data.10_account_tax_55_ee0a4534
+#: model:account.tax,name:d4e_default_data.11_account_tax_55_ee0a4534
+#: model:account.tax,name:d4e_default_data.12_account_tax_55_ee0a4534
+#: model:account.tax,name:d4e_default_data.13_account_tax_55_ee0a4534
+#: model:account.tax,name:d4e_default_data.14_account_tax_55_ee0a4534
+#: model:account.tax.template,name:d4e_default_data.account_tax_55_ee0a4534
 msgid "No VAT"
 msgstr "Pas de TVA"
 
@@ -254,221 +438,234 @@ msgstr ""
 "Préconfigurer pour créer une écriture pendant la correspondance entre des "
 "factures et des paiements"
 
+
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_other_movements_900
+#: model:account.tax,name:d4e_default_data.10_vat_other_movements_900
+#: model:account.tax,name:d4e_default_data.11_vat_other_movements_900
+#: model:account.tax,name:d4e_default_data.12_vat_other_movements_900
+#: model:account.tax,name:d4e_default_data.13_vat_other_movements_900
+#: model:account.tax,name:d4e_default_data.14_vat_other_movements_900
+#: model:account.tax.template,name:d4e_default_data.vat_other_movements_900
 msgid "Subsidies, tourist taxes at 0%"
 msgstr "Subventions, taxes touristiques à 0%"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_invest
+#: model:account.tax,name:d4e_default_data.10_vat_77_invest
+#: model:account.tax,name:d4e_default_data.11_vat_77_invest
+#: model:account.tax,name:d4e_default_data.12_vat_77_invest
+#: model:account.tax,name:d4e_default_data.13_vat_77_invest
+#: model:account.tax,name:d4e_default_data.14_vat_77_invest
+#: model:account.tax.template,name:d4e_default_data.vat_77_invest
 msgid "TVA 7.7% invest. and FG HT"
 msgstr "TVA 7.7% invest. et FG HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_invest_incl
+#: model:account.tax,name:d4e_default_data.10_vat_77_invest_incl
+#: model:account.tax,name:d4e_default_data.11_vat_77_invest_incl
+#: model:account.tax,name:d4e_default_data.12_vat_77_invest_incl
+#: model:account.tax,name:d4e_default_data.13_vat_77_invest_incl
+#: model:account.tax,name:d4e_default_data.14_vat_77_invest_incl
+#: model:account.tax.template,name:d4e_default_data.vat_77_invest_incl
 msgid "TVA 7.7% invest. and FG TTC"
 msgstr "TVA 7.7% invest. et FG TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_O_import
+#: model:account.tax,name:d4e_default_data.10_vat_O_import
+#: model:account.tax,name:d4e_default_data.11_vat_O_import
+#: model:account.tax,name:d4e_default_data.12_vat_O_import
+#: model:account.tax,name:d4e_default_data.13_vat_O_import
+#: model:account.tax,name:d4e_default_data.14_vat_O_import
+#: model:account.tax.template,name:d4e_default_data.vat_O_import
 msgid "VAT 0% import"
 msgstr "TVA 0% import"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_100_import_invest
+#: model:account.tax,name:d4e_default_data.10_vat_100_import_invest
+#: model:account.tax,name:d4e_default_data.11_vat_100_import_invest
+#: model:account.tax,name:d4e_default_data.12_vat_100_import_invest
+#: model:account.tax,name:d4e_default_data.13_vat_100_import_invest
+#: model:account.tax,name:d4e_default_data.14_vat_100_import_invest
+#: model:account.tax.template,name:d4e_default_data.vat_100_import_invest
 msgid "VAT 100% pure invest. and FG"
 msgstr "TVA 100% pure invest. et FG"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_100_import
+#: model:account.tax,name:d4e_default_data.10_vat_100_import
+#: model:account.tax,name:d4e_default_data.11_vat_100_import
+#: model:account.tax,name:d4e_default_data.12_vat_100_import
+#: model:account.tax,name:d4e_default_data.13_vat_100_import
+#: model:account.tax,name:d4e_default_data.14_vat_100_import
+#: model:account.tax.template,name:d4e_default_data.vat_100_import
 msgid "VAT 100% pure purchase of goods"
 msgstr "TVA 100% pure achat marchandise"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_25_invest
-msgid "VAT 2.5% invest. and FG HT "
+#: model:account.tax,name:d4e_default_data.10_vat_25_invest
+#: model:account.tax,name:d4e_default_data.11_vat_25_invest
+#: model:account.tax,name:d4e_default_data.12_vat_25_invest
+#: model:account.tax,name:d4e_default_data.13_vat_25_invest
+#: model:account.tax,name:d4e_default_data.14_vat_25_invest
+#: model:account.tax.template,name:d4e_default_data.vat_25_invest
+msgid "VAT 2.5% invest. and FG HT"
 msgstr "TVA 2.5% invest. et FG HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_25_invest_incl
+#: model:account.tax,name:d4e_default_data.10_vat_25_invest_incl
+#: model:account.tax,name:d4e_default_data.11_vat_25_invest_incl
+#: model:account.tax,name:d4e_default_data.12_vat_25_invest_incl
+#: model:account.tax,name:d4e_default_data.13_vat_25_invest_incl
+#: model:account.tax,name:d4e_default_data.14_vat_25_invest_incl
+#: model:account.tax.template,name:d4e_default_data.vat_25_invest_incl
 msgid "VAT 2.5% invest. and FG TTC"
 msgstr "TVA 2.5% invest. et FG TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_25_purchase
+#: model:account.tax,name:d4e_default_data.10_vat_25_purchase
+#: model:account.tax,name:d4e_default_data.11_vat_25_purchase
+#: model:account.tax,name:d4e_default_data.12_vat_25_purchase
+#: model:account.tax,name:d4e_default_data.13_vat_25_purchase
+#: model:account.tax,name:d4e_default_data.14_vat_25_purchase
+#: model:account.tax.template,name:d4e_default_data.vat_25_purchase
 msgid "VAT 2.5% purchase of goods HT"
 msgstr "TVA 2.5% achat marchandise HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_25
+#: model:account.tax,name:d4e_default_data.10_vat_25
+#: model:account.tax,name:d4e_default_data.11_vat_25
+#: model:account.tax,name:d4e_default_data.12_vat_25
+#: model:account.tax,name:d4e_default_data.13_vat_25
+#: model:account.tax,name:d4e_default_data.14_vat_25
+#: model:account.tax.template,name:d4e_default_data.vat_25
 msgid "VAT 2.5% sales excl."
 msgstr "TVA 2.5% ventes HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_25_incl
+#: model:account.tax,name:d4e_default_data.10_vat_25_incl
+#: model:account.tax,name:d4e_default_data.11_vat_25_incl
+#: model:account.tax,name:d4e_default_data.12_vat_25_incl
+#: model:account.tax,name:d4e_default_data.13_vat_25_incl
+#: model:account.tax,name:d4e_default_data.14_vat_25_incl
+#: model:account.tax.template,name:d4e_default_data.vat_25_incl
 msgid "VAT 2.5% sales incl."
 msgstr "TVA 2.5% ventes TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_37_invest
+#: model:account.tax,name:d4e_default_data.10_vat_37_invest
+#: model:account.tax,name:d4e_default_data.11_vat_37_invest
+#: model:account.tax,name:d4e_default_data.12_vat_37_invest
+#: model:account.tax,name:d4e_default_data.13_vat_37_invest
+#: model:account.tax,name:d4e_default_data.14_vat_37_invest
+#: model:account.tax.template,name:d4e_default_data.vat_37_invest
 msgid "VAT 3.7% invest. and FG HT"
 msgstr "TVA 3.7% invest. et FG HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_37_invest_incl
+#: model:account.tax,name:d4e_default_data.10_vat_37_invest_incl
+#: model:account.tax,name:d4e_default_data.11_vat_37_invest_incl
+#: model:account.tax,name:d4e_default_data.12_vat_37_invest_incl
+#: model:account.tax,name:d4e_default_data.13_vat_37_invest_incl
+#: model:account.tax,name:d4e_default_data.14_vat_37_invest_incl
+#: model:account.tax.template,name:d4e_default_data.vat_37_invest_incl
 msgid "VAT 3.7% invest. and FG TTC"
 msgstr "TVA 3.7% invest. et FG TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_37_purchase
+#: model:account.tax,name:d4e_default_data.10_vat_37_purchase
+#: model:account.tax,name:d4e_default_data.11_vat_37_purchase
+#: model:account.tax,name:d4e_default_data.12_vat_37_purchase
+#: model:account.tax,name:d4e_default_data.13_vat_37_purchase
+#: model:account.tax,name:d4e_default_data.14_vat_37_purchase
+#: model:account.tax.template,name:d4e_default_data.vat_37_purchase
 msgid "VAT 3.7% purchase of goods HT"
 msgstr "TVA 3.7% achat marchandise HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_37_purchase_incl
+#: model:account.tax,name:d4e_default_data.10_vat_37_purchase_incl
+#: model:account.tax,name:d4e_default_data.11_vat_37_purchase_incl
+#: model:account.tax,name:d4e_default_data.12_vat_37_purchase_incl
+#: model:account.tax,name:d4e_default_data.13_vat_37_purchase_incl
+#: model:account.tax,name:d4e_default_data.14_vat_37_purchase_incl
+#: model:account.tax.template,name:d4e_default_data.vat_37_purchase_incl
 msgid "VAT 3.7% purchase of goods including VAT"
 msgstr "TVA 3.7% achat marchandise TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_37
+#: model:account.tax,name:d4e_default_data.10_vat_37
+#: model:account.tax,name:d4e_default_data.11_vat_37
+#: model:account.tax,name:d4e_default_data.12_vat_37
+#: model:account.tax,name:d4e_default_data.13_vat_37
+#: model:account.tax,name:d4e_default_data.14_vat_37
+#: model:account.tax.template,name:d4e_default_data.vat_37
 msgid "VAT 3.7% sales excl."
 msgstr "TVA 3.7% ventes HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_37_incl
+#: model:account.tax,name:d4e_default_data.10_vat_37_incl
+#: model:account.tax,name:d4e_default_data.11_vat_37_incl
+#: model:account.tax,name:d4e_default_data.12_vat_37_incl
+#: model:account.tax,name:d4e_default_data.13_vat_37_incl
+#: model:account.tax,name:d4e_default_data.14_vat_37_incl
+#: model:account.tax.template,name:d4e_default_data.vat_37_incl
 msgid "VAT 3.7% sales incl."
 msgstr "TVA 3.7% ventes TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_purchase
+#: model:account.tax,name:d4e_default_data.10_vat_77_purchase
+#: model:account.tax,name:d4e_default_data.11_vat_77_purchase
+#: model:account.tax,name:d4e_default_data.12_vat_77_purchase
+#: model:account.tax,name:d4e_default_data.13_vat_77_purchase
+#: model:account.tax,name:d4e_default_data.14_vat_77_purchase
+#: model:account.tax.template,name:d4e_default_data.vat_77_purchase
 msgid "VAT 7.7% purchase of goods HT"
 msgstr "TVA 7.7% achat marchandise HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_purchase_incl
+#: model:account.tax,name:d4e_default_data.10_vat_77_purchase_incl
+#: model:account.tax,name:d4e_default_data.11_vat_77_purchase_incl
+#: model:account.tax,name:d4e_default_data.12_vat_77_purchase_incl
+#: model:account.tax,name:d4e_default_data.13_vat_77_purchase_incl
+#: model:account.tax,name:d4e_default_data.14_vat_77_purchase_incl
+#: model:account.tax.template,name:d4e_default_data.vat_77_purchase_incl
 msgid "VAT 7.7% purchase of goods including VAT."
 msgstr "TVA 7.7% achat marchandise TTC"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_purchase_reverse
+#: model:account.tax,name:d4e_default_data.10_vat_77_purchase_reverse
+#: model:account.tax,name:d4e_default_data.11_vat_77_purchase_reverse
+#: model:account.tax,name:d4e_default_data.12_vat_77_purchase_reverse
+#: model:account.tax,name:d4e_default_data.13_vat_77_purchase_reverse
+#: model:account.tax,name:d4e_default_data.14_vat_77_purchase_reverse
+#: model:account.tax.template,name:d4e_default_data.vat_77_purchase_reverse
 msgid "VAT 7.7% purchase service abroad (reverse charge)"
 msgstr "TVA 7.7%  achat service a l'etranger (reverse charge)"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_purchase_return
+#: model:account.tax,name:d4e_default_data.10_vat_77_purchase_return
+#: model:account.tax,name:d4e_default_data.11_vat_77_purchase_return
+#: model:account.tax,name:d4e_default_data.12_vat_77_purchase_return
+#: model:account.tax,name:d4e_default_data.13_vat_77_purchase_return
+#: model:account.tax,name:d4e_default_data.14_vat_77_purchase_return
+#: model:account.tax.template,name:d4e_default_data.vat_77_purchase_return
 msgid "VAT 7.7% sales (returns)"
 msgstr "TVA 7.7% ventes (retours)"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77
+#: model:account.tax,name:d4e_default_data.10_vat_77
+#: model:account.tax,name:d4e_default_data.11_vat_77
+#: model:account.tax,name:d4e_default_data.12_vat_77
+#: model:account.tax,name:d4e_default_data.13_vat_77
+#: model:account.tax,name:d4e_default_data.14_vat_77
+#: model:account.tax.template,name:d4e_default_data.vat_77
 msgid "VAT 7.7% sales excl."
 msgstr "TVA 7.7% ventes HT"
 
 #. module: d4e_default_data
-#: model:account.tax,name:d4e_default_data.1_vat_77_incl
+#: model:account.tax,name:d4e_default_data.10_vat_77_incl
+#: model:account.tax,name:d4e_default_data.11_vat_77_incl
+#: model:account.tax,name:d4e_default_data.12_vat_77_incl
+#: model:account.tax,name:d4e_default_data.13_vat_77_incl
+#: model:account.tax,name:d4e_default_data.14_vat_77_incl
+#: model:account.tax.template,name:d4e_default_data.vat_77_incl
 msgid "VAT 7.7% sales incl."
 msgstr "TVA 7.7% ventes TTC"
 
-#. module: account
-#: model:ir.actions.act_window,name:account.action_move_out_refund_type
-#: model:ir.ui.menu,name:account.menu_action_move_out_refund_type
-#: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
-#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_report_search
-msgid "Credit Notes"
-msgstr "Notes de crédit"
-
-#. module: account
-#: model:ir.actions.act_window,name:account.action_move_in_refund_type
-#: model:ir.ui.menu,name:account.menu_action_move_in_refund_type
-msgid "Refunds"
-msgstr "Notes de crédit"
-
-#. module: account_followup
-#: model:ir.actions.act_window,name:account_followup.action_view_list_customer_statements
-#: model:ir.ui.menu,name:account_followup.customer_statements_menu
-msgid "Follow-up Reports"
-msgstr "Rappels"
-
-#. module: account_reports
-#: code:addons/account_reports/models/account_partner_ledger.py:0
-#: code:addons/account_reports/models/res_partner.py:0
-#: model:ir.actions.client,name:account_reports.action_account_report_partner_ledger
-#: model:ir.model,name:account_reports.model_account_partner_ledger
-#: model:ir.ui.menu,name:account_reports.menu_action_account_report_partner_ledger
-#: model_terms:ir.ui.view,arch_db:account_reports.partner_view_buttons
-#, python-format
-msgid "Partner Ledger"
-msgstr "Relevés de comptes de tiers"
-
-#. module: account_reports
-#: code:addons/account_reports/models/account_aged_partner_balance.py:0
-#: model:ir.actions.client,name:account_reports.action_account_report_ar
-#: model:ir.model,name:account_reports.model_account_aged_receivable
-#: model:ir.ui.menu,name:account_reports.menu_action_account_report_aged_receivable
-#, python-format
-msgid "Aged Receivable"
-msgstr "Postes ouverts débiteurs"
-
-#. module: account_reports
-#: code:addons/account_reports/models/account_aged_partner_balance.py:0
-#: model:ir.actions.client,name:account_reports.action_account_report_ap
-#: model:ir.model,name:account_reports.model_account_aged_payable
-#: model:ir.ui.menu,name:account_reports.menu_action_account_report_aged_payable
-#, python-format
-msgid "Aged Payable"
-msgstr "Postes ouverts fournisseurs"
-
-#. module: account_reports
-#: code:addons/account_reports/models/account_generic_tax_report.py:0
-#: model:ir.actions.client,name:account_reports.action_account_report_gt
-#: model:ir.model.fields,field_description:account_reports.field_account_financial_html_report__tax_report
-#: model:ir.ui.menu,name:account_reports.menu_action_account_report_gt
-#: model_terms:ir.ui.view,arch_db:account_reports.view_move_form_vat_return
-#, python-format
-msgid "Tax Report"
-msgstr "Décompte TVA"
-
-#. module: account
-#: model:ir.actions.act_window,name:account.action_account_moves_ledger_partner
-#: model:ir.ui.menu,name:account.menu_action_account_moves_ledger_partner
-msgid "Partner Ledger"
-msgstr "Relevés de comptes de tiers"
-
-#. module: d4e_default_data
-#: model_terms:ir.ui.view,arch_db:d4e_default_data.res_partner_view_form_inherit
-msgid "Increment"
-msgstr "Incrémenter"
-
-#. module: d4e_default_data
-#: model:ir.model.fields,field_description:d4e_default_data.field_account_bank_statement_line__internal_reference
-#: model:ir.model.fields,field_description:d4e_default_data.field_account_move__internal_reference
-#: model:ir.model.fields,field_description:d4e_default_data.field_account_payment__internal_reference
-msgid "Internal Reference"
-msgstr "Référence interne"
-
-#. module: d4e_default_data
-#: model:ir.model.fields,field_description:d4e_default_data.field_res_partner__customer_no
-#: model:ir.model.fields,field_description:d4e_default_data.field_res_users__customer_no
-msgid "Customer no."
-msgstr "N° de client"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.view_move_form
-msgid "Bill Reference"
-msgstr "N° de facture"
-
-#. module: account
-#: model:ir.model.fields,field_description:account.field_account_move__ref
-msgid "Reference"
-msgstr "N° de facture"
-
-#. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_invoice_report__move_type__out_refund
-#: model:ir.model.fields.selection,name:account.selection__account_move__move_type__out_refund
-msgid "Customer Credit Note"
-msgstr "Note de crédit du client"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "Credit Note"
-msgstr "Note de crédit"
