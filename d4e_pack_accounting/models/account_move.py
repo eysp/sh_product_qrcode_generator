@@ -171,25 +171,73 @@ class AccountMove(models.Model):
                 new_line = line.write(
                     line_vals_list)
                 subtotal = 0
+
+
+    @api.onchange('invoice_line_ids')
+    def _onchange_invoice_line_ids(self):
+        new_lines = self.env['account.move.line']
+        new_line1 = new_lines.new({
+
+                'sequence': 10,
+                'name': 'Sous-Total-manuel 1 : 00',
+                'quantity': 1,
+                'partner_id': 8,
+                'amount_currency': 0,
+                'currency_id': 1,
+                'debit': 0,
+                'credit': 0,
+                'recompute_tax_line': True,
+                'predict_from_name': False,
+                'display_type': 'line_subtotal',
+                'is_rounding_line': False,
+                'exclude_from_invoice_tab': False
+
+        })
+        new_line2 = new_lines.new({
+
+                'sequence': 10,
+                'name': 'Sous-Total-manuel 2 : 00',
+                'quantity': 1,
+                'partner_id': 8,
+                'amount_currency': 0,
+                'currency_id': 1,
+                'debit': 0,
+                'credit': 0,
+                'recompute_tax_line': True,
+                'predict_from_name': False,
+                'display_type': 'line_subtotal',
+                'is_rounding_line': False,
+                'exclude_from_invoice_tab': False
+
+        })
+        new_lines += new_line1
+        new_lines += new_line2
+        new_lines += self.invoice_line_ids
+        self.invoice_line_ids = new_lines
+        print("int_lines : ", self.invoice_line_ids)
+
+
     @api.model
     def create(self, vals):
         res = super(AccountMove, self).create(vals)
-        if not self._context.get('request_from_action_subtotal'):
-            for move in res:
-                move.action_subtotal_create()
-                move.add_subtotal_create()
-        res.write({'update_sequence' : 'test'})
+        # if not self._context.get('request_from_action_subtotal'):
+        #     for move in res:
+        #         move.action_subtotal_create()
+        #         move.add_subtotal_create()
+        # res.write({'update_sequence' : 'test'})
         return res
 
 
 
     def write(self, vals):
         res = super(AccountMove, self).write(vals)
-        if not self._context.get('request_from_action_subtotal'):
-            for move in self:
-                move.action_subtotal()
-                move.add_subtotal()
+        # if not self._context.get('request_from_action_subtotal'):
+        #     for move in self:
+        #         move.action_subtotal()
+        #         move.add_subtotal()
         return res
+
+
 
 class AccountMoveLine(models.Model):
     _inherit = 'account.move.line'
@@ -197,6 +245,38 @@ class AccountMoveLine(models.Model):
     new_line = fields.Boolean(default=False)
     display_type = fields.Selection(selection_add=[('line_sub_total', 'Subtotal'), ('line_title', 'Titre'), ('line_subtotal', 'Subtotal')])
 
+
+    @api.model
+    def default_get(self, fields):
+        res = super(AccountMoveLine, self).default_get(fields)
+        print("self._context : ", self._context.get('current_line_vals'))
+        # 'default_display_type': 'line_subtotal'
+        if self._context.get('default_display_type') == 'line_subtotal':
+            sub_total = 0.0
+            if self._context.get('current_line_vals'):
+
+                for line in self._context.get('current_line_vals'):
+                    if (len(line) > 2) and (not (type(line[2]) is bool)) and line[2].get('credit'):
+                        sub_total += line[2]['credit']
+            res.update({
+                    'name': _('Sub-Total-manuel:      ')+str("%.2f" % sub_total) + ' ',
+                # + line.currency_id.symbol
+
+                })
+
+        # active_ids = self.env.context.get('active_ids', [])
+        # refuse_model = self.env.context.get('hr_expense_refuse_model')
+        # if refuse_model == 'hr.expense':
+        #     res.update({
+        #         'hr_expense_ids': active_ids,
+        #         'hr_expense_sheet_id': False,
+        #     })
+        # elif refuse_model == 'hr.expense.sheet':
+        #     res.update({
+        #         'hr_expense_sheet_id': active_ids[0] if active_ids else False,
+        #         'hr_expense_ids': [],
+        #     })
+        return res
 
     _sql_constraints = [
         (

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <data noupdate="1">
+    <data noupdate="0">
         <function model="account.payment.term" name="unlink">
             <value model="account.payment.term" eval="obj().search([]).ids"/>
         </function>
@@ -14,9 +14,9 @@
         </function>
     </data>
 
-    <data >
-        <record id="reconcile_customer_discount" model="account.reconcile.model">
-            <field name="name">Customer discount</field>
+    <data noupdate="1">
+    <record id="reconcile_customer_discount" model="account.reconcile.model">
+            <field name="name">Escompte client</field>
             <field name="rule_type">writeoff_button</field>
         </record>
 
@@ -27,13 +27,12 @@
                    search="[('code', '=', 3800)]"/>
             <field name="amount_type">percentage</field>
             <field name="amount_string">100</field>
-            <field name="tax_ids" model="account.tax"
-                   search="[('name', '=', 'VAT 7.7% sales excl.')]"/>
+            <field name="tax_ids" eval="[(6, 0, [ref('d4e_default_data.1_vat_77')])]"/>
             <field name="force_tax_included">True</field>
         </record>
 
         <record id="reconcile_supplier_discount" model="account.reconcile.model">
-            <field name="name">Supplier discount</field>
+            <field name="name">Escompte fournisseurs</field>
             <field name="rule_type">writeoff_button</field>
         </record>
 
@@ -44,8 +43,45 @@
                 search="[('code', '=', 4900)]"/>
             <field name="amount_type">percentage</field>
             <field name="amount_string">100</field>
-            <field name="tax_ids" model="account.tax"
-                search="[('name', '=', 'VAT 7.7% purchase of goods including VAT.')]"/>
+            <field name="tax_ids"
+                   eval="[(6, 0, [ref('d4e_default_data.1_vat_77_purchase_incl')])]"/>
+            <field name="force_tax_included">True</field>
+        </record>
+    </data>
+
+    <data >
+        <record id="reconcile_customer_discount" model="account.reconcile.model.template">
+            <field name="chart_template_id" ref="l10n_ch.l10nch_chart_template"/>
+            <field name="name">Escompte client</field>
+            <field name="rule_type">writeoff_button</field>
+        </record>
+
+        <record id="reconcile_customer_discount_line_1" model="account.reconcile.model.line.template">
+            <field name="model_id" ref="d4e_default_data.reconcile_customer_discount"/>
+            <field name="sequence">2</field>
+            <field name="account_id" model="account.account"
+                   search="[('code', '=', 3800), ('company_id', '=', obj().env.company.id)]"/>
+            <field name="amount_type">percentage</field>
+            <field name="amount_string">100</field>
+            <field name="tax_ids" eval="[(6, 0, [ref('d4e_default_data.vat_77')])]"/>
+            <field name="force_tax_included">True</field>
+        </record>
+
+        <record id="reconcile_supplier_discount" model="account.reconcile.model.template">
+            <field name="name">Escompte fournisseurs</field>
+            <field name="chart_template_id" ref="l10n_ch.l10nch_chart_template"/>
+            <field name="rule_type">writeoff_button</field>
+        </record>
+
+        <record id="reconcile_supplier_discount_line_1" model="account.reconcile.model.line.template">
+            <field name="model_id" ref="d4e_default_data.reconcile_supplier_discount"/>
+            <field name="sequence">2</field>
+            <field name="account_id" model="account.account"
+                search="[('code', '=', 4900), ('company_id', '=', obj().env.company.id)]"/>
+            <field name="amount_type">percentage</field>
+            <field name="amount_string">100</field>
+            <field name="tax_ids"
+                   eval="[(6, 0, [ref('d4e_default_data.vat_77_purchase_incl')])]"/>
             <field name="force_tax_included">True</field>
         </record>
     </data>

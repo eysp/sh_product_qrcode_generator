@@ -48,7 +48,7 @@
                   parent="hr.menu_human_resources_configuration"
                   sequence="8"/>
 
-        <function model="postal.number" name="create_postal_number_with_api"/>
+<!--        <function model="postal.number" name="create_postal_number_with_api"/>-->
 
     </data>
 </odoo>

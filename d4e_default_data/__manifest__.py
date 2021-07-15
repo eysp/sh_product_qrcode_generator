@@ -13,8 +13,9 @@
     'depends': ['base',  'l10n_ch', 'account_reports'],
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'data/translation.xml',
         'data/account_tax_data.xml',
+        'data/account_tax_template.xml',
         'data/account_data.xml',
     ],
 }
