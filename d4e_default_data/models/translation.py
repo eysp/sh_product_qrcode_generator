@@ -7,7 +7,7 @@ class IrTranslation(models.Model):
 
 
     def create_or_update_translations(self, model_name=None, lang_code=None, res_id=None, src=None, value=None):
-        list_lang = self.env['res.lang'].search([('active', '=', True)])
+        list_lang = self.env['res.lang'].search([('active', '=', True)]).mapped('code')
         for record_id in res_id:
             if lang_code in list_lang:
                 data = {
