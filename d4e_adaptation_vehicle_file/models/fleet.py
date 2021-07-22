@@ -17,12 +17,9 @@ class FleetVehicle(models.Model):
     policy_number = fields.Char('Policy N°')
     insurance_id = fields.Many2one('fleet.vehicle.log.insurance', 'Insurance', tracking=True)
 
-    def name_get(self):
-        res = super(FleetVehicle, self).name_get()
-        return res
-
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
+        args = args or []
         if operator == 'ilike' and not (name or '').strip():
             domain = []
         else:
@@ -30,4 +27,4 @@ class FleetVehicle(models.Model):
             domain = [connector, ('license_plate', operator, name),
                       '|', ('model_id.name', operator, name),
                       ('model_id.brand_id.name', operator, name)]
-        return self._search(domain, limit=limit, access_rights_uid=name_get_uid)
+        return self._search(expression.AND([domain, args]), limit=limit, access_rights_uid=name_get_uid)
