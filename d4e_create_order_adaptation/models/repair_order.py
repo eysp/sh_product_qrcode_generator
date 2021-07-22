@@ -6,7 +6,7 @@ from odoo import api, fields, models
 class Repair(models.Model):
     _inherit = 'repair.order'
 
-    vehicle_id = fields.Many2one('fleet.vehicle', 'Vehicle', tracking=True, domain="['|', ('driver_id', '=', False), ('driver_id', '=', partner_id)]")
+    vehicle_id = fields.Many2one('fleet.vehicle', 'Vehicle', tracking=True)
     mileage = fields.Float(string='Mileage')
     product_id = fields.Many2one(
         'product.product', string='Product to Repair',
@@ -41,3 +41,10 @@ class Repair(models.Model):
         if ('mileage' in vals) and (res.vehicle_id):
             res.vehicle_id.write({'odometer': res.mileage})
         return res
+
+    @api.onchange('partner_id')
+    def _onchange_partner_id(self):
+        domain = []
+        if self.partner_id:
+            domain = ['|', ('driver_id', '=', False), ('driver_id', '=', self.partner_id.id)]
+        return {'domain': {'vehicle_id': domain}}
