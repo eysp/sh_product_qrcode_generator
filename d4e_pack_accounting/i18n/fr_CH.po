@@ -196,7 +196,7 @@ msgstr "Incrémenter"
 #: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_partner__customer_no
 #: model:ir.model.fields,field_description:d4e_pack_accounting.field_res_users__customer_no
 msgid "Customer no."
-msgstr "N° de client"
+msgstr "N° de contact"
 
 #. module: d4e_pack_accounting
 #: model_terms:ir.ui.view,arch_db:d4e_pack_accounting.view_move_form
