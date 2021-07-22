@@ -39,5 +39,5 @@ class ResPartner(models.Model):
         if name:
             # Be sure name_search is symetric to name_get
             name = name.split(' / ')[-1]
-            args = ['|', '|', ('city', '=ilike', name + '%'), ('zip', '=ilike', name + '%'), ('name', operator, name)] + args
+            args = ['|', '|', '|', ('city', '=ilike', name + '%'), ('zip', '=ilike', name + '%'), ('name', operator, name), ('customer_no', operator, name)] + args
         return self._search(args, limit=limit, access_rights_uid=name_get_uid)

@@ -65,6 +65,18 @@
         </field>
     </record>
 
+    <record id="view_account_invoice_filter" model="ir.ui.view">
+        <field name="name">account.invoice.select.account_check_printing</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="ref"/>
+                <field name="internal_reference"/>
+            </field>
+        </field>
+    </record>
+
     <menuitem id="menu_action_res_partner_bank_form"
               action="base.action_res_partner_bank_account_form"
               parent="account.account_banks_menu"
