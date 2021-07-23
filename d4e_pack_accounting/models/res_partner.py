@@ -21,7 +21,7 @@ class ResPartner(models.Model):
     @api.onchange('zip')
     def on_change_zip(self):
         if self.zip:
-            return {'domain': {'postal_number_city_id': [('gplz', '=', self.zip)]}}
+            return {'domain': {'postal_number_city_id': [('postleitzahl', '=', self.zip)]}}
         else:
             self.postal_number_city_id = {}
             return {'domain': {'postal_number_city_id': []}}
@@ -30,7 +30,7 @@ class ResPartner(models.Model):
     @api.onchange('postal_number_city_id')
     def on_change_city(self):
         if self.postal_number_city_id:
-            self.zip = self.postal_number_city_id.gplz
+            self.zip = self.postal_number_city_id.postleitzahl
             self.city = self.postal_number_city_id.ortbez18
 
     @api.model
