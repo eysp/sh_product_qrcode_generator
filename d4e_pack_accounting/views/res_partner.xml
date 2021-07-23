@@ -58,6 +58,17 @@
         </field>
     </record>
 
+    <record id="view_partner_property_form_inherit" model="ir.ui.view">
+        <field name="name">view.res.partner.filter.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bank_id']" position='replace'>
+                <field name="bank_id" options="{'no_quick_create': True}"/>
+            </xpath>
+        </field>
+    </record>
+
     <record id="contacts.res_partner_menu_config" model="ir.ui.menu">
         <field eval="[(3, ref('base.group_system'))]" name="groups_id"/>
     </record>

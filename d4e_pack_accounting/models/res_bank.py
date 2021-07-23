@@ -3,6 +3,7 @@ import json
 
 from odoo.osv import expression
 from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
 import requests
 
 
@@ -25,7 +26,7 @@ class ResBank(models.Model):
         args = args or []
         domain = []
         if name:
-            domain = ['|', '|', ('bic', '=ilike', name + '%'), ('name', operator, name), ('clearing', '=ilike', name + '%')]
+            domain = ['|', '|', '|', ('bic', '=ilike', name + '%'), ('name', operator, name), ('clearing', '=ilike', name + '%'), ('city', '=ilike', name + '%')]
             if operator in expression.NEGATIVE_TERM_OPERATORS:
                 domain = ['&'] + domain
         return self._search(domain + args, limit=limit, access_rights_uid=name_get_uid)
@@ -56,3 +57,22 @@ class ResBank(models.Model):
                 bank.write(bank_vals)
             else:
                 self.env["res.bank"].create(bank_vals)
+
+class ResPartnerBank(models.Model):
+    _inherit = "res.partner.bank"
+
+    @api.onchange('bank_id')
+    def on_change_bank_id(self):
+        self.acc_number = self.bank_id.bic
+        if self.bank_id.bic == '':
+            title = _("Warning for %s", self.bank_id.name)
+            message = _(
+                "The selected bank does not contain BIC / SWIFT, please choose another bank or change the bank information.")
+            warning = {
+                'title': title,
+                'message': message
+            }
+            return {'warning': warning}
+
+
+
