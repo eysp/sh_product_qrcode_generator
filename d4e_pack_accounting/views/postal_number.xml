@@ -11,7 +11,7 @@
                     <field name="bfsnr"/>
                     <field name="plz_typ"/>
                     <field name="kanton"/>
-                    <field name="gplz"/>
+                    <field name="postleitzahl"/>
                     <field name="ortbez18"/>
                     <field name="sprachcode"/>
                 </tree>
@@ -22,7 +22,7 @@
             <field name="model">postal.number</field>
             <field name="arch" type="xml">
                 <search string="Search Postal numbers">
-                    <field name="gplz"/>
+                    <field name="postleitzahl"/>
                     <field name="ortbez18"/>
                     <separator/>
                 </search>
@@ -48,7 +48,7 @@
                   parent="hr.menu_human_resources_configuration"
                   sequence="8"/>
 
-<!--        <function model="postal.number" name="create_postal_number_with_api"/>-->
+        <function model="postal.number" name="create_postal_number_with_api"/>
 
     </data>
 </odoo>

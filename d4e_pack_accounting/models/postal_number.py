@@ -13,7 +13,7 @@ class PostalNumber(models.Model):
     bfsnr = fields.Char(string='N° OFS')
     plz_typ = fields.Char(string='Type de NPA')
     kanton = fields.Char(string='Canton')
-    gplz = fields.Char(string='NPA')
+    postleitzahl = fields.Char(string='NPA')
     ortbez18 = fields.Char(string='Localité')
     sprachcode = fields.Selection([('1', 'Allemand'), ('2', 'Français'), ('3', 'Italien')], string="Langue", default='1')
 
@@ -31,7 +31,7 @@ class PostalNumber(models.Model):
             }
             start += pas
             url = "https://swisspost.opendatasoft.com/api/records/1.0/search/?dataset={}&facet={}&facet={}&facet={}&facet={}&facet={}&facet={}&facet={}&rows={}&start={}".format(
-                str('plz_verzeichnis_v2'), str('onrp'), str('bfsnr'), str('plz_typ'), str('gplz'), str('ortbez18'),
+                str('plz_verzeichnis_v2'), str('onrp'), str('bfsnr'), str('plz_typ'), str('postleitzahl'), str('ortbez18'),
                 str('kanton'), str('sprachcode'), str(params['rows']), str(params['start']))
             reponse = requests.get(url).json()
             for rec in reponse['records']:
@@ -41,7 +41,7 @@ class PostalNumber(models.Model):
                     'bfsnr': rec['fields']['bfsnr'],
                     'plz_typ': rec['fields']['plz_typ'],
                     'kanton': rec['fields']['kanton'],
-                    'gplz': rec['fields']['gplz'],
+                    'postleitzahl': rec['fields']['postleitzahl'],
                     'ortbez18': rec['fields']['ortbez18'],
                     'sprachcode': str(rec['fields']['sprachcode']),
                 }

@@ -232,3 +232,13 @@ msgstr "Sous-Total:      "
 #, python-format
 msgid "Sub-Total:      "
 msgstr "Sous-Total:      "
+
+#. module: d4e_pack_accounting
+#: code:addons/d4e_pack_accounting/models/res_bank.py:0
+#, python-format
+msgid ""
+"The selected bank does not contain BIC / SWIFT, please choose another bank "
+"or change the bank information."
+msgstr ""
+"La banque sélectionnée ne contient pas de BIC/SWIFT, veuillez choisir une autre banque "
+"ou modifier les informations de la banque."
