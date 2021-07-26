@@ -63,7 +63,6 @@ class ResPartnerBank(models.Model):
 
     @api.onchange('bank_id')
     def on_change_bank_id(self):
-        self.acc_number = self.bank_id.bic
         if self.bank_id.bic == '':
             title = _("Warning for %s", self.bank_id.name)
             message = _(
