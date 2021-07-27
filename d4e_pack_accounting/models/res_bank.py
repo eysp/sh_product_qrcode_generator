@@ -72,6 +72,12 @@ class ResPartnerBank(models.Model):
                 'message': message
             }
             return {'warning': warning}
-
-
-
+        elif self.bank_id and not self.acc_number:
+            title = _("Warning")
+            message = _(
+                "Please complete your bank information or your changes will be discarded.")
+            warning = {
+                'title': title,
+                'message': message
+            }
+            return {'warning': warning}
