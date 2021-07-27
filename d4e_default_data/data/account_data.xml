@@ -93,7 +93,7 @@
             <field name="note">Payment within 10 days.</field>
             <field name="active">1</field>
             <field name="sequence">10</field>
-            <field name="line_ids" eval="[(5, 0), (0, 0, {'value': 'balance', 'value_amount': 0.0, 'sequence': 500, 'days': 15, 'option': 'day_after_invoice_date', 'day_of_the_month': 0})]"/>
+            <field name="line_ids" eval="[(5, 0), (0, 0, {'value': 'balance', 'value_amount': 0.0, 'sequence': 500, 'days': 10, 'option': 'day_after_invoice_date', 'day_of_the_month': 0})]"/>
         </record>
 
         <record id="account_payment_term_30_days" model="account.payment.term">
