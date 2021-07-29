@@ -10,7 +10,7 @@
     'version': '14.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['fleet'],
+    'depends': ['fleet', 'hr_fleet'],
     # always loaded
     'data': [
         'security/ir.model.access.csv',
