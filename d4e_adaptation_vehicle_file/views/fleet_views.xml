@@ -113,7 +113,7 @@
                 <field name="radio_code"/>
                 <field name="key_identification"/>
             </xpath>
-             <xpath expr="//button[3]" position="replace"/>
+             <xpath expr="//button[4]" position="replace"/>
             <xpath expr="//button[@name='open_assignation_logs']" position="before">
                 <button name="return_repair_to_open"
                         type="object"
