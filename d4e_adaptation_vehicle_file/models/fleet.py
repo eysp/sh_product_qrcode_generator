@@ -36,7 +36,6 @@ class FleetVehicle(models.Model):
         }
 
 
-
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
         args = args or []
